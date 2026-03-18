@@ -1,0 +1,106 @@
+import { personal } from "@/data/personal";
+
+export default function AboutPage() {
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-24">
+      <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-4 font-body">
+        About
+      </p>
+      <h1 className="font-display text-3xl md:text-4xl leading-tight mb-8">
+        The full story.
+      </h1>
+
+      {/* Bio */}
+      <div className="prose prose-stone max-w-none mb-16">
+        <p className="text-[var(--text-secondary)] font-body leading-relaxed text-base whitespace-pre-line">
+          {personal.bio}
+        </p>
+      </div>
+
+      {/* Education */}
+      {personal.education && personal.education.length > 0 && (
+        <section className="mb-16">
+          <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+            Education
+          </h2>
+          <div className="flex flex-col gap-4">
+            {personal.education.map((edu) => (
+              <div
+                key={edu.school}
+                className="p-6 rounded-2xl border border-[var(--border)]"
+              >
+                <h3 className="font-display text-lg">{edu.school}</h3>
+                <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
+                  {edu.degree} · Class of {edu.graduationYear}
+                  {edu.gpa && ` · ${edu.gpa} GPA`}
+                </p>
+                {edu.relevantCourses && (
+                  <div className="flex gap-2 mt-3 flex-wrap">
+                    {edu.relevantCourses.map((course) => (
+                      <span
+                        key={course}
+                        className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Interests */}
+      {personal.interests && (
+        <section className="mb-16">
+          <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+            Interests
+          </h2>
+          <div className="flex gap-3 flex-wrap">
+            {personal.interests.map((interest) => (
+              <span
+                key={interest}
+                className="px-4 py-2 rounded-full border border-[var(--border)] text-sm font-medium text-[var(--text-secondary)] font-body"
+              >
+                {interest}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Links */}
+      <section>
+        <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+          Connect
+        </h2>
+        <div className="flex gap-4 flex-wrap">
+          <a
+            href={`mailto:${personal.email}`}
+            className="px-5 py-3 rounded-lg border border-[var(--border)] text-sm font-semibold font-body hover:bg-[var(--bg-secondary)] transition-colors"
+          >
+            {personal.email}
+          </a>
+          <a
+            href={personal.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-3 rounded-lg border border-[var(--border)] text-sm font-semibold font-body hover:bg-[var(--bg-secondary)] transition-colors"
+          >
+            LinkedIn ↗
+          </a>
+          <a
+            href={personal.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-3 rounded-lg border border-[var(--border)] text-sm font-semibold font-body hover:bg-[var(--bg-secondary)] transition-colors"
+          >
+            GitHub ↗
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
