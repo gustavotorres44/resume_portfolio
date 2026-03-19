@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { personal } from "@/data/personal";
-import PuertoRico from "@/components/ui/PuertoRico";
 
 export default function AboutPage() {
   return (
@@ -81,7 +80,11 @@ export default function AboutPage() {
         </h2>
         <div className="p-6 rounded-2xl border border-[var(--border)] flex flex-col sm:flex-row items-center gap-6">
           <div className="w-56 shrink-0">
-            <PuertoRico />
+            <img
+              src="/images/PR_flag_island.jpg"
+              alt="Puerto Rico island filled with flag"
+              className="w-full rounded-xl object-contain"
+            />
           </div>
           <div>
             <h3 className="font-display text-lg mb-2">Puerto Rico 🇵🇷</h3>
