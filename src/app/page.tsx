@@ -70,11 +70,20 @@ export default function Home() {
           </div>
           <div className="block p-6 rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 opacity-80">
             <div className="flex justify-between items-start mb-3">
-              <div>
-                <h3 className="font-display text-xl">{upcomingExperience.role}</h3>
-                <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
-                  {upcomingExperience.company} · {upcomingExperience.location}
-                </p>
+              <div className="flex items-center gap-3">
+                {upcomingExperience.logo && (
+                  <img
+                    src={upcomingExperience.logo}
+                    alt={upcomingExperience.company}
+                    className="w-10 h-10 rounded-lg object-contain bg-white p-1 shrink-0"
+                  />
+                )}
+                <div>
+                  <h3 className="font-display text-xl">{upcomingExperience.role}</h3>
+                  <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
+                    {upcomingExperience.company} · {upcomingExperience.location}
+                  </p>
+                </div>
               </div>
               <span className="text-xs text-[var(--text-secondary)] font-body whitespace-nowrap">
                 {upcomingExperience.startDate} – {upcomingExperience.endDate}
@@ -98,13 +107,22 @@ export default function Home() {
             className="block p-6 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)] transition-colors group"
           >
             <div className="flex justify-between items-start mb-3">
-              <div>
-                <h3 className="font-display text-xl group-hover:text-[var(--accent)] transition-colors">
-                  {latestExperience.role}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
-                  {latestExperience.company} · {latestExperience.location}
-                </p>
+              <div className="flex items-center gap-3">
+                {latestExperience.logo && (
+                  <img
+                    src={latestExperience.logo}
+                    alt={latestExperience.company}
+                    className="w-10 h-10 rounded-lg object-contain bg-white p-1 shrink-0"
+                  />
+                )}
+                <div>
+                  <h3 className="font-display text-xl group-hover:text-[var(--accent)] transition-colors">
+                    {latestExperience.role}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
+                    {latestExperience.company} · {latestExperience.location}
+                  </p>
+                </div>
               </div>
               <span className="text-xs text-[var(--text-secondary)] font-body whitespace-nowrap">
                 {latestExperience.startDate} – {latestExperience.endDate}

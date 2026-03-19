@@ -22,6 +22,7 @@ export interface PersonalInfo {
     graduationYear: string;
     gpa?: string;
     relevantCourses?: string[];
+    logo?: string;
   }[];
 }
 
@@ -56,16 +57,19 @@ I speak Spanish, English, and Portuguese fluently, and conversational German —
       school: "Georgia Institute of Technology",
       degree: "B.S. Industrial Engineering, Minor in Computing & Intelligence",
       graduationYear: "2026",
+      logo: "/images/gt.jpg",
     },
     {
       school: "WHU – Otto Beisheim School of Management",
       degree: "Exchange Program",
       graduationYear: "2025",
+      logo: "/images/WHU.jpg",
     },
     {
       school: "Southwestern Educational Society",
       degree: "High School Diploma",
       graduationYear: "2022",
+      logo: "/images/seso.jpg",
     },
   ],
 };

@@ -120,6 +120,7 @@ export const experiences: ExperienceEntry[] = [
     endDate: "Present",
     type: "parttime",
     category: "campus",
+    logo: "/images/bori.jpg",
     summary:
       "Lead board activities and internal communications for BORI, a Georgia Tech organization fostering Puerto Rican culture and community.",
     description: [
@@ -138,6 +139,7 @@ export const experiences: ExperienceEntry[] = [
     endDate: "Aug 2025",
     type: "parttime",
     category: "campus",
+    logo: "/images/bori.jpg",
     summary:
       "Co-founded BORI at Georgia Tech to celebrate Puerto Rican heritage and build community for the Puerto Rican diaspora on campus.",
     description: [
@@ -157,7 +159,7 @@ export const experiences: ExperienceEntry[] = [
     endDate: "Present",
     type: "parttime",
     category: "campus",
-    logo: "https://www.google.com/s2/favicons?domain=brasa.us&sz=64",
+    logo: "/images/brasa.jpg",
     summary:
       "Oversee all event planning and execution for BRASA, a community of 150+ Brazilian students at Georgia Tech.",
     description: [
@@ -175,7 +177,7 @@ export const experiences: ExperienceEntry[] = [
     endDate: "Aug 2025",
     type: "parttime",
     category: "campus",
-    logo: "https://www.google.com/s2/favicons?domain=brasa.us&sz=64",
+    logo: "/images/brasa.jpg",
     summary:
       "Planned and coordinated events to further Brazilian culture at Georgia Tech.",
     description: [

@@ -67,6 +67,7 @@ Currently at MVP stage — more updates coming soon.`,
     skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"],
     links: {
       github: "https://github.com/gustavotorres44/InternNest",
+      live: "https://intern-nest-psi.vercel.app",
     },
     featured: true,
   },

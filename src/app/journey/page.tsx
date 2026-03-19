@@ -24,7 +24,7 @@ const stops = [
     coordinates: [-84.4, 33.7] as [number, number],
     year: "Aug 2022 – Present",
     role: "B.S. Industrial Engineering · Minor in Computing & Intelligence",
-    description: "Home base. Founded BORI, led events for BRASA, chaired SHPE's academic development, and mentored students through their first career steps.",
+    description: "Home base. Founded BORI, led events for BRASA, chaired SHPE's academic development, and mentored students through their first career steps. As well as conducting research with Georgia Tech's Medical AI group and co-founding InternNest.",
     color: "#B3A369",
     emoji: "🐝",
   },
@@ -119,7 +119,7 @@ export default function JourneyPage() {
       <div className="flex gap-6 flex-col lg:flex-row items-start">
 
         {/* Left: info card */}
-        <div className="w-full lg:w-64 shrink-0">
+        <div className="w-full lg:w-44 shrink-0">
           {activeStop ? (
             <div
               key={activeStop.id}
@@ -225,8 +225,9 @@ export default function JourneyPage() {
                       }}
                     />
                     <text
-                      textAnchor="middle"
-                      y={-20}
+                      textAnchor={stop.id === "atl" ? "start" : "middle"}
+                      x={stop.id === "atl" ? 12 : 0}
+                      y={stop.id === "atl" ? 4 : -20}
                       style={{
                         fontSize: 10,
                         fill: "var(--text-secondary)",
@@ -238,8 +239,9 @@ export default function JourneyPage() {
                       {stop.label}
                     </text>
                     <text
-                      textAnchor="middle"
-                      y={-30}
+                      textAnchor={stop.id === "atl" ? "start" : "middle"}
+                      x={stop.id === "atl" ? 12 : 0}
+                      y={stop.id === "atl" ? -6 : -30}
                       style={{
                         fontSize: 12,
                         userSelect: "none",
@@ -257,7 +259,7 @@ export default function JourneyPage() {
         </div>
 
         {/* Sidebar timeline */}
-        <div className="w-full lg:w-72 shrink-0 flex flex-col gap-1">
+        <div className="w-full lg:w-48 shrink-0 flex flex-col gap-1">
           <p className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-3 font-body">
             Timeline
           </p>

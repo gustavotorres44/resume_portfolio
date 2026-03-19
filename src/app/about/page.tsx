@@ -40,8 +40,16 @@ export default function AboutPage() {
             {personal.education.map((edu) => (
               <div
                 key={edu.school}
-                className="p-6 rounded-2xl border border-[var(--border)]"
+                className="p-6 rounded-2xl border border-[var(--border)] flex items-start gap-4"
               >
+                {edu.logo && (
+                  <img
+                    src={edu.logo}
+                    alt={edu.school}
+                    className="w-12 h-12 rounded-xl object-contain shrink-0 bg-white p-1"
+                  />
+                )}
+                <div className="flex-1 min-w-0">
                 <h3 className="font-display text-lg">{edu.school}</h3>
                 <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
                   {edu.degree} · Class of {edu.graduationYear}
@@ -59,6 +67,7 @@ export default function AboutPage() {
                     ))}
                   </div>
                 )}
+                </div>
               </div>
             ))}
           </div>
