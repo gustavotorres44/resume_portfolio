@@ -1,14 +1,27 @@
+import Image from "next/image";
 import { personal } from "@/data/personal";
+import PuertoRico from "@/components/ui/PuertoRico";
 
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
-      <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-4 font-body">
-        About
-      </p>
-      <h1 className="font-display text-3xl md:text-4xl leading-tight mb-8">
-        The full story.
-      </h1>
+      <div className="flex items-center gap-6 mb-8">
+        <Image
+          src="/images/avatar.jpg"
+          alt={personal.name}
+          width={96}
+          height={96}
+          className="rounded-full object-cover shrink-0"
+        />
+        <div>
+          <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-1 font-body">
+            About
+          </p>
+          <h1 className="font-display text-3xl md:text-4xl leading-tight">
+            The full story.
+          </h1>
+        </div>
+      </div>
 
       {/* Bio */}
       <div className="prose prose-stone max-w-none mb-16">
@@ -51,6 +64,24 @@ export default function AboutPage() {
           </div>
         </section>
       )}
+
+      {/* From Puerto Rico */}
+      <section className="mb-16">
+        <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+          Where I&apos;m From
+        </h2>
+        <div className="p-6 rounded-2xl border border-[var(--border)] flex flex-col sm:flex-row items-center gap-6">
+          <div className="w-56 shrink-0">
+            <PuertoRico />
+          </div>
+          <div>
+            <h3 className="font-display text-lg mb-2">Puerto Rico 🇵🇷</h3>
+            <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed">
+              I was born and raised in Puerto Rico — an island that shaped how I see community, culture, and resilience. It&apos;s a big part of why I co-founded BORI at Georgia Tech and why representing the Puerto Rican diaspora in spaces like finance and engineering matters to me.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Interests */}
       {personal.interests && (

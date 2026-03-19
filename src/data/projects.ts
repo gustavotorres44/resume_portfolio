@@ -1,8 +1,6 @@
 // ============================================================
 // TODO: Replace with your real projects.
 // Set featured: true on 1-2 projects you want on the landing page.
-// The "description" field is your case study — tell the story
-// of the problem, your approach, and the result.
 // ============================================================
 
 export interface ProjectEntry {
@@ -24,53 +22,52 @@ export interface ProjectEntry {
 
 export const projects: ProjectEntry[] = [
   {
-    id: "proj-1",
+    id: "proj-sideraceros",
+    title: "Sideraceros Logistics Modernization",
+    tagline: "Route optimization and customer prioritization strategy for a steel distributor with a 3-truck fleet.",
+    description: `The problem: Sideraceros, a steel distributor with 50+ employees and a 3-truck fleet, was losing time and money to manual route planning — emergency re-routing occurred daily, causing delivery delays and inflated fuel costs.
+
+Over three months at WHU – Otto Beisheim School of Management, I analyzed 90+ daily delivery logs to assess truck utilization, routing inefficiencies, and emergency handling patterns.
+
+My approach involved modeling delivery flows using Vehicle Routing Problem (VRP) frameworks. I demonstrated that just 15 delivery nodes yield 6×10¹¹ possible route combinations — making it mathematically clear why manual planning was failing. From there I proposed two solutions: a Pareto-based customer prioritization system and a route optimization strategy integrating Dijkstra's Algorithm with real-time traffic and delay data.
+
+The results: Tier 1 client service reliability improved by 30%, projected delivery delays cut by 25%, weekly emergency route changes reduced by 40%, and potential fuel and driver hour savings identified — all while allowing the company to defer additional truck purchases.`,
+    role: "Lead Analyst",
+    timeline: "Jan 2025 – Apr 2025",
+    skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research"],
+    featured: true,
+  },
+  {
+    id: "proj-medical-ai",
+    title: "AI-Based Medical Outcome Prediction",
+    tagline: "CNN-based model trained on 50,000+ patient records to predict clinical outcomes using multimodal data fusion.",
+    description: `As part of the AI-Based Discovery and Innovation (Medical AI Thrust) research group at Georgia Institute of Technology, I worked on building a machine learning model to predict patient outcomes using the Emory medical database of over 50,000 patients.
+
+My contributions included cleaning and normalizing datasets using Python and the Pandas library to optimize processing times, and collaborating with a team of 15+ members to refine the Convolutional Neural Network (CNN) algorithm.
+
+The key technical challenge was implementing and testing different stages of data fusion — combining medical images, doctors' notes, and normalized structured datasets to improve predictive accuracy. Each fusion stage required careful evaluation of how different data modalities interacted and affected model performance.
+
+This project deepened my understanding of real-world ML pipelines, the messiness of medical data, and how interdisciplinary collaboration across a large team shapes technical decisions.`,
+    role: "Research Team Member",
+    timeline: "Aug 2024 – Dec 2024",
+    skills: ["Python", "Pandas", "Convolutional Neural Networks", "Data Cleaning", "Machine Learning", "Medical AI", "Data Fusion"],
+    featured: false,
+  },
+  {
+    id: "proj-internnest",
     title: "InternNest",
-    tagline:
-      "A platform helping interns find subleases, navigate transit, and build community in new cities.",
+    tagline: "A platform helping interns find subleases, navigate transit, and build community in new cities.",
     description: `The problem: Every summer, thousands of interns relocate to cities they've never lived in. They're scrambling to find short-term housing, figure out transit, and meet people — all while starting a new job.
 
 We built InternNest to solve this. The platform matches interns with neighborhoods based on their commute, budget, and priorities, surfaces transit tips from past interns, and connects them with a community of other interns in their city.
 
-My role was [your specific contribution]. I built [specific things] using [specific tech]. The hardest part was [honest challenge]. We tested it with [X] real interns and learned [key insight].
-
-This project taught me [what you took away] and I'm continuing to develop it into [next steps].`,
+Currently at MVP stage — more updates coming soon.`,
     role: "Co-founder & Developer",
     timeline: "Jan 2026 – Present",
     skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"],
     links: {
-      live: "https://internnest.vercel.app",
-      github: "https://github.com/yourusername/internnest",
+      github: "https://github.com/gustavotorres44/InternNest",
     },
     featured: true,
-  },
-  {
-    id: "proj-2",
-    title: "Project Two",
-    tagline: "A one-liner describing what this project does.",
-    description: `What problem did this solve? Who was it for?
-
-What was your approach? What technologies did you use and why?
-
-What was the result? What did you learn?
-
-Be specific. Recruiters and hiring managers want to understand how you think, not just what you built.`,
-    role: "Lead Developer",
-    timeline: "Sep 2025 – Dec 2025",
-    skills: ["Python", "Flask", "React", "MongoDB"],
-    links: {
-      github: "https://github.com/yourusername/project-two",
-    },
-    featured: true,
-  },
-  {
-    id: "proj-3",
-    title: "Project Three",
-    tagline: "Another project tagline.",
-    description: `Describe this project the same way — problem, approach, result, learning.`,
-    role: "Developer",
-    timeline: "Mar 2025 – May 2025",
-    skills: ["Java", "Spring Boot", "MySQL"],
-    featured: false,
   },
 ];

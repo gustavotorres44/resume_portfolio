@@ -1,22 +1,35 @@
 import Link from "next/link";
+import Image from "next/image";
 import { personal } from "@/data/personal";
 import { experiences } from "@/data/experience";
 import { projects } from "@/data/projects";
 
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured);
-  const latestExperience = experiences[0];
+  const upcomingExperience = experiences.find((e) => e.category === "upcoming");
+  const latestExperience = experiences.find((e) => e.category === "professional");
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
       {/* Hero */}
       <section className="mb-20">
-        <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-4 font-body">
-          {personal.location}
-        </p>
-        <h1 className="font-display text-4xl md:text-5xl leading-tight mb-6">
-          {personal.name}
-        </h1>
+        <div className="flex items-center gap-6 mb-6">
+          <Image
+            src="/images/avatar.jpg"
+            alt={personal.name}
+            width={80}
+            height={80}
+            className="rounded-full object-cover shrink-0"
+          />
+          <div>
+            <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-1 font-body">
+              {personal.location}
+            </p>
+            <h1 className="font-display text-4xl md:text-5xl leading-tight">
+              {personal.name}
+            </h1>
+          </div>
+        </div>
         <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8 max-w-xl font-body">
           {personal.headline}
         </p>
@@ -43,6 +56,36 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* Upcoming Role */}
+      {upcomingExperience && (
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-6">
+            <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase font-body">
+              Upcoming Role
+            </h2>
+            <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-[var(--accent)]/10 text-[var(--accent)] font-body">
+              Coming Soon
+            </span>
+          </div>
+          <div className="block p-6 rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 opacity-80">
+            <div className="flex justify-between items-start mb-3">
+              <div>
+                <h3 className="font-display text-xl">{upcomingExperience.role}</h3>
+                <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
+                  {upcomingExperience.company} · {upcomingExperience.location}
+                </p>
+              </div>
+              <span className="text-xs text-[var(--text-secondary)] font-body whitespace-nowrap">
+                {upcomingExperience.startDate} – {upcomingExperience.endDate}
+              </span>
+            </div>
+            <p className="text-sm text-[var(--text-secondary)] font-body italic">
+              {upcomingExperience.summary}
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Latest Role */}
       {latestExperience && (
