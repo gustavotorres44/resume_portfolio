@@ -37,7 +37,7 @@ Beyond engineering, I'm a community builder at heart. I co-founded BORI (Boricua
 
 I thrive at the intersection of technology, operations, and people — whether that's optimizing a logistics system, mentoring students through SHPE, or designing cultural events that bring communities together.
 
-I speak Spanish, English, and Portuguese fluently, and conversational German — which has come in handy everywhere from exchange programs to international projects.`,
+I speak Spanish, English, and Portuguese fluently, and conversational German — which has come in handy everywhere from exchange programs to international internships.`,
   location: "Atlanta, GA",
   email: "gustavoandrestorres@gmail.com",
   links: {
