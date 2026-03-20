@@ -75,23 +75,24 @@ export default function SkillsPage() {
 
       {/* Certifications tab */}
       {activeTab === "certifications" && (
-        <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {certifications.map((cert) => (
             <div
               key={cert.name}
-              className="flex items-center gap-5 p-6 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)]/40 transition-colors"
+              className="flex flex-col items-center text-center gap-4 p-7 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)]/50 bg-[var(--bg-secondary)] transition-colors"
             >
               {cert.logo && (
-                <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-white flex items-center justify-center shrink-0 overflow-hidden">
-                  <img src={cert.logo} alt={cert.issuer} width={28} height={28} className="object-contain" />
+                <div className="w-16 h-16 rounded-2xl border border-[var(--border)] bg-white flex items-center justify-center shrink-0 overflow-hidden">
+                  <img src={cert.logo} alt={cert.issuer} width={44} height={44} className="object-contain" />
                 </div>
               )}
-              <div className="flex-1">
-                <h3 className="font-display text-base">{cert.name}</h3>
-                <p className="text-sm text-[var(--text-secondary)] font-body mt-0.5">
-                  {cert.issuer} · Issued {cert.issued}
-                </p>
+              <div>
+                <h3 className="font-display text-base leading-snug mb-1">{cert.name}</h3>
+                <p className="text-xs text-[var(--text-secondary)] font-body">{cert.issuer}</p>
               </div>
+              <span className="mt-auto px-3 py-1 rounded-full text-xs font-semibold font-body bg-[var(--accent)]/10 text-[var(--accent)]">
+                Issued {cert.issued}
+              </span>
             </div>
           ))}
         </div>

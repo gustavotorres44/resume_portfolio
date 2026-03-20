@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ChatWidget } from "@/components/chat/ChatWidget";
 import { PageTransition } from "@/components/ui/PageTransition";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 const displayFont = Libre_Baskerville({
   subsets: ["latin"],
@@ -67,6 +68,7 @@ export default function RootLayout({
         <main className="min-h-screen"><PageTransition>{children}</PageTransition></main>
         <Footer />
         <ChatWidget />
+        <BackToTop />
       </body>
     </html>
   );

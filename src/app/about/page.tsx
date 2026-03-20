@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { personal } from "@/data/personal";
 import { CopyEmail } from "@/components/ui/CopyEmail";
+import { CountUp } from "@/components/ui/CountUp";
 
 export default function AboutPage() {
   return (
@@ -33,13 +36,15 @@ export default function AboutPage() {
       {/* Metrics */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
         {[
-          { value: "$50K+", label: "Cost savings at Toyota" },
-          { value: "1.5M+", label: "Customers impacted at Accenture" },
-          { value: "6", label: "Locations worked in" },
-          { value: "4", label: "Languages spoken" },
+          { to: 50, prefix: "$", suffix: "K+", decimals: 0, label: "Cost savings at Toyota" },
+          { to: 1.5, prefix: "", suffix: "M+", decimals: 1, label: "Customers impacted at Accenture" },
+          { to: 6, prefix: "", suffix: "", decimals: 0, label: "Locations worked in" },
+          { to: 5, prefix: "", suffix: "", decimals: 0, label: "Languages spoken" },
         ].map((m) => (
           <div key={m.label} className="p-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] text-center">
-            <p className="font-display text-3xl mb-1">{m.value}</p>
+            <p className="font-display text-3xl mb-1">
+              <CountUp to={m.to} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} />
+            </p>
             <p className="text-xs text-[var(--text-secondary)] font-body leading-snug">{m.label}</p>
           </div>
         ))}
@@ -115,6 +120,35 @@ export default function AboutPage() {
               I was born and raised in Puerto Rico, an island that shaped how I see community, culture, and resilience. It&apos;s a big part of why I co-founded BORI at Georgia Tech and why representing the Puerto Rican diaspora in spaces like finance and engineering matters to me.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Languages */}
+      <section className="mb-16">
+        <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+          Languages
+        </h2>
+        <div className="flex flex-col gap-4">
+          {[
+            { lang: "Spanish", level: "Native", pct: 100 },
+            { lang: "English", level: "Native", pct: 100 },
+            { lang: "Portuguese", level: "Fluent", pct: 80 },
+            { lang: "German", level: "Conversational", pct: 50 },
+            { lang: "French", level: "Basic", pct: 25 },
+          ].map(({ lang, level, pct }) => (
+            <div key={lang}>
+              <div className="flex justify-between items-center mb-1.5">
+                <span className="text-sm font-semibold font-body text-[var(--text-primary)]">{lang}</span>
+                <span className="text-xs text-[var(--text-secondary)] font-body">{level}</span>
+              </div>
+              <div className="h-2 rounded-full bg-[var(--bg-secondary)] overflow-hidden">
+                <div
+                  className="h-full rounded-full bg-[var(--accent)] transition-all duration-1000 ease-out"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
