@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { ComposableMap, Geographies, Geography, Marker, Line } from "react-simple-maps";
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const US_STATES_URL = "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json";
 const OVERVIEW = { center: [-52, 36] as [number, number], scale: 290 };
 
 const stops = [
@@ -266,6 +267,25 @@ export default function JourneyPage() {
                       fill={isDark ? "#2a2a2a" : "#c8cdd5"}
                       stroke={isDark ? "#3a3a3a" : "#a0a8b4"}
                       strokeWidth={0.5}
+                      style={{
+                        default: { outline: "none" },
+                        hover: { outline: "none" },
+                        pressed: { outline: "none" },
+                      }}
+                    />
+                  ))
+                }
+              </Geographies>
+
+              <Geographies geography={US_STATES_URL}>
+                {({ geographies }: { geographies: { rsmKey: string; [key: string]: unknown }[] }) =>
+                  geographies.map((geo) => (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill="transparent"
+                      stroke={activeStop?.color ?? (isDark ? "#3a3a3a" : "#a0a8b4")}
+                      strokeWidth={0.8}
                       style={{
                         default: { outline: "none" },
                         hover: { outline: "none" },
