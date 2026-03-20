@@ -3,15 +3,13 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export function PageTransition({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+function Fader({ children }: { children: React.ReactNode }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    setVisible(false);
     const t = setTimeout(() => setVisible(true), 30);
     return () => clearTimeout(t);
-  }, [pathname]);
+  }, []);
 
   return (
     <div
@@ -24,4 +22,9 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   );
+}
+
+export function PageTransition({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  return <Fader key={pathname}>{children}</Fader>;
 }
