@@ -18,6 +18,7 @@ export interface ProjectEntry {
   };
   images?: string[];
   featured?: boolean;
+  highlights?: { value: string; label: string }[];
 }
 
 export const projects: ProjectEntry[] = [
@@ -37,7 +38,13 @@ Currently at MVP stage — more updates coming soon.`,
       github: "https://github.com/gustavotorres44/InternNest",
       live: "https://intern-nest-psi.vercel.app",
     },
+    images: ["/images/landingpage.jpeg"],
     featured: true,
+    highlights: [
+      { value: "Live", label: "Deployed on Vercel" },
+      { value: "MVP", label: "Current stage" },
+      { value: "5", label: "Core tech layers" },
+    ],
   },
   {
     id: "proj-sideraceros",
@@ -54,6 +61,11 @@ The results: Tier 1 client service reliability improved by 30%, projected delive
     timeline: "Jan 2025 – Apr 2025",
     skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research", "Pareto Analysis"],
     featured: true,
+    highlights: [
+      { value: "30%", label: "Better Tier 1 reliability" },
+      { value: "25%", label: "Fewer delivery delays" },
+      { value: "40%", label: "Fewer emergency re-routes" },
+    ],
   },
   {
     id: "proj-medical-ai",
@@ -70,5 +82,10 @@ This project deepened my understanding of real-world ML pipelines, the messiness
     timeline: "Aug 2024 – Dec 2024",
     skills: ["Python", "Pandas", "Convolutional Neural Networks", "Data Cleaning", "Machine Learning", "Medical AI", "Data Fusion"],
     featured: false,
+    highlights: [
+      { value: "50K+", label: "Patient records analyzed" },
+      { value: "15+", label: "Researchers collaborated with" },
+      { value: "3", label: "Data modalities fused" },
+    ],
   },
 ];
