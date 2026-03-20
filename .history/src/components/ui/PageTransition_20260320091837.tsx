@@ -16,7 +16,7 @@ function Fader({ children }: { children: React.ReactNode }) {
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(80px)",
-        transition: "opacity 1.2s ease, transform 1.2s ease",
+        transition: "opacity 1.5s ease, transform 1.5s ease",
       }}
     >
       {children}
