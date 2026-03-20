@@ -86,21 +86,21 @@ export function PhotoGallery({ images, title }: { images: string[]; title: strin
             </div>
 
             {/* Image */}
-            <div className="relative flex items-center justify-center bg-[var(--bg-secondary)] h-96">
+            <div className="relative bg-[var(--bg-secondary)]" style={{ height: "24rem" }}>
               <button
                 onClick={prev}
-                className="absolute left-3 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors"
               >
                 &#8249;
               </button>
               <img
                 src={images[activeIndex]}
                 alt={`Photo ${activeIndex + 1}`}
-                className="max-h-full max-w-full object-contain"
+                style={{ maxHeight: "24rem", maxWidth: "100%", height: "auto", width: "auto", display: "block", margin: "0 auto", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
               />
               <button
                 onClick={next}
-                className="absolute right-3 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors"
               >
                 &#8250;
               </button>
