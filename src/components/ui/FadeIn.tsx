@@ -31,8 +31,8 @@ export function FadeIn({
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(20px)",
-        transition: `opacity 0.5s ease ${delay}ms, transform 0.5s ease ${delay}ms`,
+        transform: visible ? "translateY(0)" : "translateY(12px)",
+        transition: `opacity 0.3s ease ${delay}ms, transform 0.3s ease ${delay}ms`,
       }}
     >
       {children}
