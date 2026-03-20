@@ -60,48 +60,57 @@ export function PhotoGallery({ images, title }: { images: string[]; title: strin
       </div>
 
       {modalOpen && (
-        <div className="fixed inset-0 z-[200] bg-black/90 flex flex-col" onClick={close}>
+        {/* Backdrop */}
+      <div className="fixed inset-0 z-[200] bg-black/40 flex items-center justify-center p-4" onClick={close}>
+        {/* Card */}
+        <div
+          className="bg-[var(--bg-primary)] rounded-2xl border border-[var(--border)] shadow-2xl w-full max-w-2xl overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
+        >
           {/* Header */}
-          <div className="flex items-center justify-between px-6 py-4 shrink-0">
-            <p className="text-white font-body font-semibold" onClick={(e) => e.stopPropagation()}>{title}</p>
-            <div className="flex items-center gap-4">
-              <span className="text-white/60 text-sm font-body">{activeIndex + 1} / {images.length}</span>
-              <button
-                onClick={(e) => { e.stopPropagation(); close(); }}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 text-white text-xl flex items-center justify-center transition-colors"
-              >
-                ×
-              </button>
-            </div>
+          <div className="flex items-center justify-between px-5 py-3 border-b border-[var(--border)]">
+            <span className="text-sm font-semibold font-body text-[var(--text-secondary)]">
+              {activeIndex + 1} / {images.length}
+            </span>
+            <button
+              onClick={close}
+              className="w-8 h-8 rounded-full hover:bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xl flex items-center justify-center transition-colors"
+            >
+              ×
+            </button>
           </div>
 
           {/* Image */}
-          <div className="flex-1 flex items-center justify-center px-4 min-h-0">
-            <button onClick={(e) => { e.stopPropagation(); prev(); }} className="text-white/60 hover:text-white text-3xl px-4 shrink-0">‹</button>
+          <div className="relative flex items-center justify-center bg-[var(--bg-secondary)] h-96">
+            <button onClick={prev} className="absolute left-3 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors">
+              ‹
+            </button>
             <img
               src={images[activeIndex]}
               alt={`Photo ${activeIndex + 1}`}
-              className="max-h-full max-w-full object-contain rounded-xl"
-              onClick={(e) => e.stopPropagation()}
+              className="max-h-full max-w-full object-contain"
             />
-            <button onClick={(e) => { e.stopPropagation(); next(); }} className="text-white/60 hover:text-white text-3xl px-4 shrink-0">›</button>
+            <button onClick={next} className="absolute right-3 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors">
+              ›
+            </button>
           </div>
 
           {/* Thumbnails */}
-          <div className="flex gap-2 overflow-x-auto px-6 py-4 shrink-0">
+          <div className="flex gap-2 overflow-x-auto px-4 py-3 border-t border-[var(--border)]">
             {images.map((src, i) => (
               <img
                 key={i}
                 src={src}
                 alt={`Thumb ${i + 1}`}
-                onClick={(e) => { e.stopPropagation(); setActiveIndex(i); }}
-                className={`w-16 h-12 object-cover rounded-lg shrink-0 cursor-pointer transition-opacity ${
-                  i === activeIndex ? "opacity-100 ring-2 ring-white" : "opacity-50 hover:opacity-80"
+                onClick={() => setActiveIndex(i)}
+                className={`w-14 h-10 object-cover rounded-lg shrink-0 cursor-pointer transition-opacity ${
+                  i === activeIndex ? "opacity-100 ring-2 ring-[var(--accent)]" : "opacity-40 hover:opacity-70"
                 }`}
               />
             ))}
           </div>
         </div>
+      </div>
       )}
     </>
   );
