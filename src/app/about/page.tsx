@@ -4,8 +4,22 @@ import Image from "next/image";
 import { personal } from "@/data/personal";
 import { CopyEmail } from "@/components/ui/CopyEmail";
 import { CountUp } from "@/components/ui/CountUp";
+import { useRef, useEffect, useState } from "react";
 
 export default function AboutPage() {
+  const [barsVisible, setBarsVisible] = useState(false);
+  const barsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = barsRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setBarsVisible(true); observer.disconnect(); }
+    }, { threshold: 0.3 });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="max-w-6xl mx-auto px-6 py-24">
       <div className="flex items-center gap-6 mb-8">
@@ -128,7 +142,7 @@ export default function AboutPage() {
         <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
           Languages
         </h2>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4" ref={barsRef}>
           {[
             { lang: "Spanish", level: "Native", pct: 100 },
             { lang: "English", level: "Native", pct: 100 },
@@ -144,7 +158,7 @@ export default function AboutPage() {
               <div className="h-2 rounded-full bg-[var(--bg-secondary)] overflow-hidden">
                 <div
                   className="h-full rounded-full bg-[var(--accent)] transition-all duration-1000 ease-out"
-                  style={{ width: `${pct}%` }}
+                  style={{ width: barsVisible ? `${pct}%` : "0%" }}
                 />
               </div>
             </div>

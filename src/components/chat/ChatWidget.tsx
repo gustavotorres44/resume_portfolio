@@ -4,21 +4,23 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { getBotResponse, newId, type Message } from "@/lib/chatbot";
 
-const ROUTES = ["/experience", "/projects", "/skills", "/journey", "/about", "/resume"];
+const BASE_ROUTES = ["/experience", "/projects", "/skills", "/journey", "/about", "/resume"];
 
 function renderText(text: string, onNav: () => void) {
   const clean = text.replace(/\*\*(.*?)\*\*/g, "$1");
-  const regex = /(\/(?:experience|projects|skills|journey|about|resume))/g;
+  const regex = /(\/(?:experience|projects|skills|journey|about|resume)(?:#[a-z-]+)?)/g;
   const parts = clean.split(regex);
-  return parts.map((part, i) =>
-    ROUTES.includes(part) ? (
+  return parts.map((part, i) => {
+    const isRoute = BASE_ROUTES.some((r) => part === r || part.startsWith(r + "#"));
+    if (!isRoute) return part;
+    const [path, hash] = part.split("#");
+    const label = hash ? `${path.slice(1)} › ${hash}` : path.slice(1);
+    return (
       <Link key={i} href={part} onClick={onNav} className="font-semibold text-[var(--accent)] hover:underline">
-        {part.slice(1)}
+        {label}
       </Link>
-    ) : (
-      part
-    )
-  );
+    );
+  });
 }
 
 const WELCOME: Message = {

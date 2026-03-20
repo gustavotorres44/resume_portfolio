@@ -60,6 +60,7 @@ I speak Spanish, English, and Portuguese fluently, and conversational German, wh
       graduationYear: "2026",
       logo: "/images/gt.jpg",
       ranking: "#1 Industrial Engineering in the U.S.",
+      relevantCourses: ["Data Manipulation", "Probability with Applications", "Basic Stat Methods", "Discrete Math", "OOP", "Data Structures"],
     },
     {
       school: "WHU – Otto Beisheim School of Management",

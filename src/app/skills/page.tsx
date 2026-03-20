@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { skillCategories, certifications } from "@/data/skills";
+import { personal } from "@/data/personal";
 
 type Tab = "skills" | "certifications";
 
@@ -46,6 +47,24 @@ export default function SkillsPage() {
       {/* Skills tab */}
       {activeTab === "skills" && (
         <div className="flex flex-col gap-10">
+          {/* Relevant Coursework */}
+          {personal.education?.[0]?.relevantCourses && (
+            <section>
+              <h2 className="text-sm font-bold text-[var(--text-primary)] tracking-wide uppercase mb-4 font-body">
+                Relevant Coursework
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {personal.education[0].relevantCourses!.map((course) => (
+                  <span
+                    key={course}
+                    className="px-4 py-2 rounded-full border border-[var(--border)] text-sm font-medium text-[var(--text-secondary)] font-body hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+                  >
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </section>
+          )}
           {skillCategories.map((cat) => (
             <section key={cat.category}>
               <h2 className="text-sm font-bold text-[var(--text-primary)] tracking-wide uppercase mb-4 font-body">
