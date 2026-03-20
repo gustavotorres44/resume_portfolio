@@ -2,7 +2,7 @@ import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24">
+    <div className="max-w-6xl mx-auto px-6 py-24">
       <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-4 font-body">
         Projects
       </p>
