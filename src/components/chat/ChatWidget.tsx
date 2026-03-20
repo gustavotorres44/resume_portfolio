@@ -33,7 +33,17 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([WELCOME]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  const [tooltipFading, setTooltipFading] = useState(false);
+
+  useEffect(() => {
+    const show = setTimeout(() => setShowTooltip(true), 1500);
+    const fade = setTimeout(() => setTooltipFading(true), 5500);
+    const hide = setTimeout(() => setShowTooltip(false), 6000);
+    return () => { clearTimeout(show); clearTimeout(fade); clearTimeout(hide); };
+  }, []);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -54,9 +64,20 @@ export function ChatWidget() {
 
   return (
     <>
+      {/* Tooltip */}
+      {showTooltip && !open && (
+        <div
+          className="fixed bottom-20 right-6 z-50 bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] text-xs font-semibold font-body px-3 py-2 rounded-xl shadow-lg whitespace-nowrap animate-bounce"
+          style={{ transition: "opacity 0.5s ease", opacity: tooltipFading ? 0 : 1 }}
+        >
+          Ask me anything about Gus!
+          <div className="absolute -bottom-1.5 right-4 w-3 h-3 bg-[var(--bg-primary)] border-r border-b border-[var(--border)] rotate-45" />
+        </div>
+      )}
+
       {/* Floating button */}
       <button
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => { setOpen((o) => !o); setShowTooltip(false); }}
         className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-[var(--text-primary)] text-white shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity"
         aria-label="Open chat"
       >
