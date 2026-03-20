@@ -7,7 +7,13 @@ import { getBotResponse, newId, type Message } from "@/lib/chatbot";
 const BASE_ROUTES = ["/experience", "/projects", "/skills", "/journey", "/about", "/resume"];
 
 function renderText(text: string, onNav: () => void) {
-  const clean = text.replace(/\*\*(.*?)\*\*/g, "$1");
+  const clean = text
+    .replace(/\*\*(.*?)\*\*/g, "$1")
+    // Convert markdown links [text](url) → normalize the url to a route path
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, _label, url) => {
+      const normalized = url.replace(/\s*[›>\/]\s*/g, "#").replace(/\s+/g, "-").toLowerCase();
+      return normalized.startsWith("/") ? normalized : `/${normalized}`;
+    });
   const regex = /(\/(?:experience|projects|skills|journey|about|resume)(?:#[a-z-]+)?)/g;
   const parts = clean.split(regex);
   return parts.map((part, i) => {
