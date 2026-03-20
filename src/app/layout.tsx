@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ChatWidget } from "@/components/chat/ChatWidget";
 import { PageTransition } from "@/components/ui/PageTransition";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { Analytics } from "@vercel/analytics/react";
 
 const displayFont = Libre_Baskerville({
   subsets: ["latin"],
@@ -69,6 +70,7 @@ export default function RootLayout({
         <Footer />
         <ChatWidget />
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
