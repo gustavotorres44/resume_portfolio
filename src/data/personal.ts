@@ -60,7 +60,7 @@ I speak Spanish, English, and Portuguese fluently, and conversational German, wh
       graduationYear: "2026",
       logo: "/images/gt.jpg",
       ranking: "#1 Industrial Engineering in the U.S.",
-      relevantCourses: ["Data Manipulation", "Probability with Applications", "Basic Stat Methods", "Discrete Math", "OOP", "Data Structures", "Regression & Forecasting", "Simulation Analysis & Design", "Intro to Artificial Intelligence", "Intro to Perception & Robotics", "Supply Chain Economics", "Engineering Optimization", "Stochastic Manufacturing & Service Systems"],
+      relevantCourses: ["Data Manipulation", "Probability with Applications", "Basic Stat Methods", "Discrete Math", "OOP", "Data Structures", "Regression & Forecasting", "Simulation Analysis & Design", "Intro to Artificial Intelligence", "Intro to Perception & Robotics", "Supply Chain Economics", "Engineering Optimization", "Stochastic Manufacturing & Service Systems", "Time Series Analysis & Machine Learning", "Supply Chain Management", "Money, Banking & Financial Markets"],
     },
     {
       school: "WHU – Otto Beisheim School of Management",
