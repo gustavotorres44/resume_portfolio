@@ -52,18 +52,18 @@ Currently at MVP stage — more updates coming soon.`,
   {
     id: "proj-sideraceros",
     title: "Sideraceros at a Crossroads",
-    tagline: "Route optimization and customer prioritization strategy for a Madrid-based steel distributor — developed as a formal case study at WHU Otto Beisheim School of Management.",
+    tagline: "Route optimization and customer prioritization strategy for a Madrid-based steel distributor, developed as a formal case study at WHU Otto Beisheim School of Management.",
     description: `Sideraceros is a steel products distributor based in Madrid, Spain, specializing in metal structure, machinery, and automotive industries. A family business turned mid-size operation with 50 employees and 3 trucks, they supply specialized alloys and high-strength steel to clients across the greater Madrid area.
 
-In March 2025, Sideraceros landed a major construction client with strict delivery windows — exposing a critical flaw in their operations. Every morning, Ana, the operations lead, would write the day's delivery routes on a piece of paper based on experience alone. No digitized records, no optimization model, and emergencies handled by scribbling changes on the same paper mid-route. The system worked at small scale, but was now a liability.
+In March 2025, Sideraceros landed a major construction client with strict delivery windows, exposing a critical flaw in their operations. Every morning, Ana, the operations lead, would write the day's delivery routes on a piece of paper based on experience alone. No digitized records, no optimization model, and emergencies handled by scribbling changes on the same paper mid-route. The system worked at small scale, but was now a liability.
 
-The first step was digitizing 90+ handwritten delivery logs — referred to internally as the "pink pages" — the only record of three months of truck operations. This revealed the mathematical reality of the problem: with just 15 delivery nodes, there are 6 × 10¹¹ possible route combinations, calculated by the formula (n−1)!/2. Manual planning wasn't just inefficient — it was mathematically impossible to do optimally at scale.
+The first step was digitizing 90+ handwritten delivery logs, referred to internally as the "pink pages," the only record of three months of truck operations. This revealed the mathematical reality of the problem: with just 15 delivery nodes, there are 6 × 10¹¹ possible route combinations, calculated by the formula (n−1)!/2. Manual planning wasn't just inefficient; it was mathematically impossible to do optimally at scale.
 
-Using the Pareto principle, we segmented Sideraceros' 93 clients into three priority tiers based on delivery frequency. Analysis of the first 60 delivery sheets identified the top 10 customers — Tubos Paris, Dayroa, Hipur, Greymet, Eurotramex, and others — accounting for 36% of all deliveries. Tier 1 customers (Tubos Paris and Dayroa) alone represented 30% of top-10 delivery volume and received first-priority routing in all scenarios.
+Using the Pareto principle, we segmented Sideraceros' 93 clients into three priority tiers based on delivery frequency. Analysis of the first 60 delivery sheets identified the top 10 customers, Tubos Paris, Dayroa, Hipur, Greymet, Eurotramex, and others, accounting for 36% of all deliveries. Tier 1 customers (Tubos Paris and Dayroa) alone represented 30% of top-10 delivery volume and received first-priority routing in all scenarios.
 
-With tiers established, we designed a route optimization strategy integrating Dijkstra's Algorithm. Each delivery node is assigned a weight based on customer priority, distance, historical delay data, and time-of-day traffic patterns across Madrid. The algorithm calculates the optimal path while allowing real-time adjustments — ensuring Tier 1 clients always receive priority service without significantly increasing total kilometers driven.
+With tiers established, we designed a route optimization strategy integrating Dijkstra's Algorithm. Each delivery node is assigned a weight based on customer priority, distance, historical delay data, and time-of-day traffic patterns across Madrid. The algorithm calculates the optimal path while allowing real-time adjustments, ensuring Tier 1 clients always receive priority service without significantly increasing total kilometers driven.
 
-The resulting framework gave Sideraceros a scalable, data-driven alternative to gut-feel routing — one designed to grow with the company as order volumes and client complexity increased.
+The resulting framework gave Sideraceros a scalable, data-driven alternative to gut-feel routing, designed to grow with the company as order volumes and client complexity increased.
 
 The project was developed as a formal case study at WHU Otto Beisheim School of Management, including a full teaching note prepared for faculty use and a supplementary process analysis document (conducted in Spanish) documenting the analytical methodology behind the customer segmentation.`,
     role: "Lead Analyst",
@@ -97,11 +97,11 @@ The project was developed as a formal case study at WHU Otto Beisheim School of 
     approach: [
       {
         title: "Digitize the Data",
-        description: "Analyzed and digitized 90+ handwritten daily delivery logs — the only operational record Sideraceros had. Structured the data to uncover routing patterns, truck utilization rates, and the frequency of mid-day emergency re-routes.",
+        description: "Analyzed and digitized 90+ handwritten daily delivery logs, the only operational record Sideraceros had. Structured the data to uncover routing patterns, truck utilization rates, and the frequency of mid-day emergency re-routes.",
       },
       {
         title: "Customer Prioritization via Pareto",
-        description: "Segmented 93 clients into 3 tiers using the Pareto principle. The top 10 customers accounted for 36% of all deliveries. Tier 1 (Tubos Paris and Dayroa) represented 30% of top-10 volume — these clients received guaranteed first-priority routing in all scenarios.",
+        description: "Segmented 93 clients into 3 tiers using the Pareto principle. The top 10 customers accounted for 36% of all deliveries. Tier 1 (Tubos Paris and Dayroa) represented 30% of top-10 volume; these clients received guaranteed first-priority routing in all scenarios.",
       },
       {
         title: "Route Optimization via Dijkstra's Algorithm",
@@ -109,7 +109,7 @@ The project was developed as a formal case study at WHU Otto Beisheim School of 
       },
       {
         title: "Teaching Note & Faculty Framework",
-        description: "Developed a formal teaching note for WHU faculty outlining how to guide students through the case — covering discussion questions, key decision points, and the pedagogical structure behind the Pareto segmentation and Dijkstra routing methodology.",
+        description: "Developed a formal teaching note for WHU faculty outlining how to guide students through the case, covering discussion questions, key decision points, and the pedagogical structure behind the Pareto segmentation and Dijkstra routing methodology.",
       },
     ],
   },

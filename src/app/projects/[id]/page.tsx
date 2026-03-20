@@ -146,7 +146,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
           </h2>
           <div className="rounded-2xl border border-[var(--border)] overflow-hidden bg-[var(--bg-secondary)]">
             <div className="px-5 py-3 border-b border-[var(--border)] flex items-center justify-between">
-              <p className="text-sm font-semibold font-body text-[var(--text-secondary)]">Sideraceros at a Crossroads — WHU Case Study</p>
+              <p className="text-sm font-semibold font-body text-[var(--text-secondary)]">Sideraceros at a Crossroads WHU Case Study</p>
               <a
                 href={project.caseStudyPdf}
                 target="_blank"
