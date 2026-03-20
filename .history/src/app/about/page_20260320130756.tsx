@@ -35,8 +35,8 @@ export default function AboutPage() {
         {[
           { value: "$50K+", label: "Cost savings at Toyota" },
           { value: "1.5M+", label: "Customers impacted at Accenture" },
-          { value: "6", label: "Locations worked in" },
-          { value: "4", label: "Languages spoken" },
+          { value: "3", label: "Countries worked in" },
+          { value: "5", label: "Languages spoken" },
         ].map((m) => (
           <div key={m.label} className="p-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] text-center">
             <p className="font-display text-3xl mb-1">{m.value}</p>
