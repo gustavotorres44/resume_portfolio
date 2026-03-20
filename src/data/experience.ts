@@ -61,32 +61,6 @@ export const experiences: ExperienceEntry[] = [
     ],
   },
   {
-    id: "exp-sideraceros",
-    company: "Sideraceros",
-    role: "Logistics & Operations Analyst",
-    location: "Vallendar, Germany (WHU Exchange)",
-    startDate: "Jan 2025",
-    endDate: "Apr 2025",
-    type: "internship",
-    category: "professional",
-    logo: "https://www.google.com/s2/favicons?domain=whu.edu&sz=64",
-    summary:
-      "Led a logistics modernization project for a steel distributor with a 3-truck fleet and 50+ employees, applying VRP modeling and Dijkstra's Algorithm to reduce delivery delays and improve route efficiency.",
-    description: [
-      "Analyzed 90+ daily delivery logs to assess truck utilization, routing inefficiencies, and emergency handling patterns.",
-      "Modeled delivery flows using Vehicle Routing Problem (VRP) frameworks, demonstrating that 15 delivery nodes produce 6×10¹¹ possible route combinations.",
-      "Designed a Pareto-based customer prioritization system to improve Tier 1 client service reliability.",
-      "Developed a route optimization strategy integrating Dijkstra's Algorithm with real-time traffic and delay data.",
-      "Presented findings and recommendations to company leadership, enabling data-driven infrastructure decisions.",
-    ],
-    skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research", "Pareto Analysis"],
-    highlights: [
-      "Improved Tier 1 client service reliability by 30%",
-      "Projected delivery delays reduced by 25%",
-      "Weekly emergency re-routes reduced by 40%",
-    ],
-  },
-  {
     id: "exp-toyota-2",
     company: "Toyota North America",
     role: "Production Engineer Co-op, Dejima Laser Welding Equipment Group",

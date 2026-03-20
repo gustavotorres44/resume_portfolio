@@ -42,17 +42,17 @@ Currently at MVP stage — more updates coming soon.`,
   {
     id: "proj-sideraceros",
     title: "Sideraceros Logistics Modernization",
-    tagline: "Route optimization and customer prioritization strategy for a steel distributor with a 3-truck fleet.",
-    description: `The problem: Sideraceros, a steel distributor with 50+ employees and a 3-truck fleet, was losing time and money to manual route planning — emergency re-routing occurred daily, causing delivery delays and inflated fuel costs.
+    tagline: "Route optimization and customer prioritization strategy for a steel distributor with a 3-truck fleet across Vallendar and Madrid.",
+    description: `The problem: Sideraceros, a steel distributor with 50+ employees and a 3-truck fleet operating across Vallendar, Germany and Madrid, Spain, was losing time and money to manual route planning. Emergency re-routing occurred daily, causing delivery delays and inflated fuel costs.
 
-Over three months at WHU – Otto Beisheim School of Management, I analyzed 90+ daily delivery logs to assess truck utilization, routing inefficiencies, and emergency handling patterns.
+As part of my exchange semester at WHU – Otto Beisheim School of Management, I took on the role of Lead Analyst and spent three months analyzing 90+ daily delivery logs to assess truck utilization, routing inefficiencies, and emergency handling patterns.
 
-My approach involved modeling delivery flows using Vehicle Routing Problem (VRP) frameworks. I demonstrated that just 15 delivery nodes yield 6×10¹¹ possible route combinations — making it mathematically clear why manual planning was failing. From there I proposed two solutions: a Pareto-based customer prioritization system and a route optimization strategy integrating Dijkstra's Algorithm with real-time traffic and delay data.
+My approach involved modeling delivery flows using Vehicle Routing Problem (VRP) frameworks. I demonstrated that just 15 delivery nodes yield 6×10¹¹ possible route combinations, making it mathematically clear why manual planning was failing. From there I proposed two solutions: a Pareto-based customer prioritization system to protect Tier 1 client relationships, and a route optimization strategy integrating Dijkstra's Algorithm with real-time traffic and delay data.
 
-The results: Tier 1 client service reliability improved by 30%, projected delivery delays cut by 25%, weekly emergency route changes reduced by 40%, and potential fuel and driver hour savings identified — all while allowing the company to defer additional truck purchases.`,
+The results: Tier 1 client service reliability improved by 30%, projected delivery delays cut by 25%, weekly emergency route changes reduced by 40%, and potential fuel and driver hour savings identified, all while allowing the company to defer additional truck purchases.`,
     role: "Lead Analyst",
     timeline: "Jan 2025 – Apr 2025",
-    skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research"],
+    skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research", "Pareto Analysis"],
     featured: true,
   },
   {
