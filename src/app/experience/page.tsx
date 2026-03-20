@@ -113,7 +113,7 @@ export default function ExperiencePage() {
         Where I&apos;ve worked and shown up.
       </h1>
       <p className="text-[var(--text-secondary)] font-body mb-8 max-w-lg">
-        From internships to career fairs, here&apos;s where I&apos;ve put in the work — in the office, on campus, and on the conference floor.
+        From internships to career fairs, here&apos;s where I&apos;ve put in the work: in the office, on campus, and on the conference floor.
       </p>
 
       {/* Section toggle */}
