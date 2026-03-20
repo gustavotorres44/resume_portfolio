@@ -79,7 +79,7 @@ export function ChatWidget() {
                       : "bg-[var(--bg-secondary)] text-[var(--text-primary)] rounded-bl-sm"
                   }`}
                 >
-                  {msg.text}
+                  {msg.text.replace(/\*\*(.*?)\*\*/g, "$1")}
                 </div>
 
                 {/* Link button */}
