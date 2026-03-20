@@ -186,6 +186,7 @@ export default function JourneyPage() {
 
   function zoomOut() {
     setZoomed(false);
+    setActive(null);
     animateTo(OVERVIEW.center, OVERVIEW.scale);
   }
 
