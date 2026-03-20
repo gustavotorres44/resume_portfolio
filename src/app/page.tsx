@@ -101,34 +101,34 @@ export default function Home() {
         <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
           Currently Building
         </h2>
-        <div className="p-6 rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 group">
-          <div className="flex items-start justify-between gap-4 mb-3 flex-wrap">
+        <div className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 overflow-hidden flex flex-col md:flex-row">
+          <div className="p-6 flex flex-col justify-between flex-1">
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="font-display text-xl">InternNest</h3>
                 <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-600 font-body">Live</span>
               </div>
-              <p className="text-sm text-[var(--text-secondary)] font-body">Co-founder & Developer · Jan 2026 – Present</p>
+              <p className="text-sm text-[var(--text-secondary)] font-body mb-3">Co-founder & Developer · Jan 2026 – Present</p>
+              <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed mb-4">
+                A platform helping interns find subleases, navigate transit, and build community in new cities. Built with Next.js, TypeScript, and Tailwind.
+              </p>
+              <div className="flex gap-2 flex-wrap mb-5">
+                {["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"].map((s) => (
+                  <span key={s} className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body">{s}</span>
+                ))}
+              </div>
             </div>
             <a
               href="https://intern-nest-psi.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body hover:opacity-90 transition-opacity shrink-0"
+              className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body hover:opacity-90 transition-opacity w-fit"
             >
               Visit Site ↗
             </a>
           </div>
-          <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed mb-4">
-            A platform helping interns find subleases, navigate transit, and build community in new cities. Built with Next.js, TypeScript, and Tailwind.
-          </p>
-          <div className="mb-4 rounded-xl overflow-hidden border border-[var(--border)]">
-            <img src="/images/landingpage.jpeg" alt="InternNest landing page" className="w-full object-cover object-top max-h-48" />
-          </div>
-          <div className="flex gap-2 flex-wrap">
-            {["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"].map((s) => (
-              <span key={s} className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body">{s}</span>
-            ))}
+          <div className="md:w-72 shrink-0 border-t md:border-t-0 md:border-l border-[var(--accent)]/20 overflow-hidden">
+            <img src="/images/landingpage.jpeg" alt="InternNest landing page" className="w-full h-full object-cover object-top" />
           </div>
         </div>
       </section>
