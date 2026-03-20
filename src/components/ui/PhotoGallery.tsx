@@ -86,23 +86,22 @@ export function PhotoGallery({ images, title }: { images: string[]; title: strin
             </div>
 
             {/* Image */}
-            <div className="relative bg-[var(--bg-secondary)] overflow-hidden" style={{ height: "24rem" }}>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img
-                  src={images[activeIndex]}
-                  alt={`Photo ${activeIndex + 1}`}
-                  style={{ maxHeight: "24rem", maxWidth: "100%", height: "auto", width: "auto" }}
-                />
-              </div>
+            <div className="bg-[var(--bg-secondary)] flex items-center justify-between px-3 py-4 gap-3">
               <button
                 onClick={prev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors"
+                className="shrink-0 w-8 h-8 rounded-full bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors hover:bg-[var(--bg-secondary)]"
               >
                 &#8249;
               </button>
+              <img
+                src={images[activeIndex]}
+                alt={`Photo ${activeIndex + 1}`}
+                className="w-full rounded-lg object-contain"
+                style={{ maxHeight: "70vh" }}
+              />
               <button
                 onClick={next}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-[var(--bg-primary)]/80 hover:bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors"
+                className="shrink-0 w-8 h-8 rounded-full bg-[var(--bg-primary)] border border-[var(--border)] text-[var(--text-primary)] flex items-center justify-center text-lg transition-colors hover:bg-[var(--bg-secondary)]"
               >
                 &#8250;
               </button>
