@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-24">
       {/* Hero */}
-      <section className="mb-20">
+      <section className="mb-14">
         <div className="flex items-center gap-6 mb-6">
           <Image
             src="/images/avatar.jpg"
@@ -59,7 +59,7 @@ export default function Home() {
 
       {/* Upcoming Role */}
       {upcomingExperience && (
-        <section className="mb-20">
+        <section className="mb-14">
           <div className="flex items-center gap-3 mb-6">
             <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase font-body">
               Upcoming Role
@@ -97,7 +97,7 @@ export default function Home() {
       )}
 
       {/* InternNest */}
-      <section className="mb-20">
+      <section className="mb-14">
         <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
           Currently Building
         </h2>
@@ -135,7 +135,7 @@ export default function Home() {
 
       {/* Latest Role */}
       {latestExperience && (
-        <section className="mb-20">
+        <section className="mb-14">
           <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
             Latest Role
           </h2>
