@@ -122,6 +122,9 @@ export default function Home() {
           <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed mb-4">
             A platform helping interns find subleases, navigate transit, and build community in new cities. Built with Next.js, TypeScript, and Tailwind.
           </p>
+          <div className="mb-4 rounded-xl overflow-hidden border border-[var(--border)]">
+            <img src="/images/landingpage.jpeg" alt="InternNest landing page" className="w-full object-cover object-top max-h-48" />
+          </div>
           <div className="flex gap-2 flex-wrap">
             {["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"].map((s) => (
               <span key={s} className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body">{s}</span>
