@@ -13,13 +13,17 @@ export function PhotoGallery({ images, title }: { images: string[]; title: strin
 
   useEffect(() => {
     if (!modalOpen) return;
+    document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
   }, [modalOpen]);
 
   const [a, b, c] = images;
