@@ -14,7 +14,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
       const t = setTimeout(() => {
         prevPath.current = pathname;
         setVisible(true);
-      }, 80);
+      }, 150);
       return () => clearTimeout(t);
     }
   }, [pathname]);
@@ -23,8 +23,8 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
     <div
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(8px)",
-        transition: "opacity 0.25s ease, transform 0.25s ease",
+        transform: visible ? "translateY(0)" : "translateY(6px)",
+        transition: "opacity 0.4s ease, transform 0.4s ease",
       }}
     >
       {children}
