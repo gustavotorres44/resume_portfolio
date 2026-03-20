@@ -23,6 +23,7 @@ export interface PersonalInfo {
     gpa?: string;
     relevantCourses?: string[];
     logo?: string;
+    ranking?: string;
   }[];
 }
 
@@ -58,12 +59,14 @@ I speak Spanish, English, and Portuguese fluently, and conversational German, wh
       degree: "B.S. Industrial Engineering, Minor in Computing & Intelligence",
       graduationYear: "2026",
       logo: "/images/gt.jpg",
+      ranking: "#1 Industrial Engineering in the U.S.",
     },
     {
       school: "WHU – Otto Beisheim School of Management",
       degree: "Exchange Program",
       graduationYear: "2025",
       logo: "/images/WHU.jpg",
+      ranking: "#1 Business School in Germany · Top 30 in Europe",
     },
     {
       school: "Southwestern Educational Society",

@@ -64,12 +64,19 @@ export default function AboutPage() {
                     className="w-12 h-12 rounded-xl object-contain shrink-0 bg-white p-1"
                   />
                 )}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 flex items-start justify-between gap-4 flex-wrap">
+                <div>
                 <h3 className="font-display text-lg">{edu.school}</h3>
                 <p className="text-sm text-[var(--text-secondary)] font-body mt-1">
                   {edu.degree} · Class of {edu.graduationYear}
                   {edu.gpa && ` · ${edu.gpa} GPA`}
                 </p>
+                </div>
+                {edu.ranking && (
+                  <span className="px-3 py-1.5 rounded-xl bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-semibold font-body shrink-0 text-right leading-snug">
+                    {edu.ranking}
+                  </span>
+                )}
                 {edu.relevantCourses && (
                   <div className="flex gap-2 mt-3 flex-wrap">
                     {edu.relevantCourses.map((course) => (
