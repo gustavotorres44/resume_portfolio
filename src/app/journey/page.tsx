@@ -75,6 +75,7 @@ const stops = [
     role: "WHU – Otto Beisheim School of Management",
     description: "Exchange semester in Germany. Led the Sideraceros logistics modernization project, applying VRP modeling and Dijkstra's algorithm to cut delivery delays by 25%.",
     color: "#FFCC00",
+    highlightOpacity: "12",
     emoji: "🇩🇪",
     image: "/images/whulocation.jpg",
   },
@@ -273,7 +274,7 @@ export default function JourneyPage() {
                       <Geography
                         key={geo.rsmKey}
                         geography={geo}
-                        fill={isHighlighted ? `${activeStop!.color}30` : (isDark ? "#2a2a2a" : "#c8cdd5")}
+                        fill={isHighlighted ? `${activeStop!.color}${"highlightOpacity" in activeStop! ? (activeStop as {highlightOpacity: string}).highlightOpacity : "30"}` : (isDark ? "#2a2a2a" : "#c8cdd5")}
                         stroke={isHighlighted ? activeStop!.color : (isDark ? "#3a3a3a" : "#a0a8b4")}
                         strokeWidth={isHighlighted ? 1.5 : 0.5}
                         style={{
@@ -295,7 +296,7 @@ export default function JourneyPage() {
                       <Geography
                         key={geo.rsmKey}
                         geography={geo}
-                        fill={isHighlighted ? `${activeStop!.color}25` : "transparent"}
+                        fill={isHighlighted ? `${activeStop!.color}${"highlightOpacity" in activeStop! ? (activeStop as {highlightOpacity: string}).highlightOpacity : "25"}` : "transparent"}
                         stroke={isHighlighted ? activeStop!.color : (isDark ? "#3a3a3a" : "#a0a8b4")}
                         strokeWidth={isHighlighted ? 1.5 : 0.5}
                         style={{
