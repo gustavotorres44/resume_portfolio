@@ -30,6 +30,21 @@ export default function AboutPage() {
         </p>
       </div>
 
+      {/* Metrics */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        {[
+          { value: "$50K+", label: "Cost savings at Toyota" },
+          { value: "1.5M+", label: "Customers impacted at Accenture" },
+          { value: "3", label: "Countries worked in" },
+          { value: "5", label: "Languages spoken" },
+        ].map((m) => (
+          <div key={m.label} className="p-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] text-center">
+            <p className="font-display text-3xl mb-1">{m.value}</p>
+            <p className="text-xs text-[var(--text-secondary)] font-body leading-snug">{m.label}</p>
+          </div>
+        ))}
+      </div>
+
       {/* Education */}
       {personal.education && personal.education.length > 0 && (
         <section className="mb-16">
