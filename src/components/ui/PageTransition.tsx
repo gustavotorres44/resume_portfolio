@@ -23,7 +23,8 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
     <div
       style={{
         opacity: visible ? 1 : 0,
-        transition: "opacity 0.4s ease",
+        transform: visible ? "translateY(0)" : "translateY(12px)",
+        transition: "opacity 1.2s ease, transform 1.2s ease",
       }}
     >
       {children}
