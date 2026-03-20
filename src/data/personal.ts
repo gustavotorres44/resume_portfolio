@@ -27,7 +27,7 @@ export interface PersonalInfo {
 }
 
 export const personal: PersonalInfo = {
-  name: "Gustavo Torres",
+  name: "Gustavo A. Torres Murphy",
   headline: "Industrial Engineering, Minor in Computing & Intelligence at Georgia Tech. Operations, Technology & Community Builder.",
   bio: `I'm an Industrial Engineering student at Georgia Tech with a passion for solving complex operational problems and building communities that matter.
 

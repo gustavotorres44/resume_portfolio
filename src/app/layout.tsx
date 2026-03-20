@@ -21,11 +21,11 @@ const bodyFont = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Gustavo Torres — Portfolio",
+  title: "Gustavo A. Torres Murphy — Portfolio",
   description:
     "Industrial Engineering student at Georgia Tech. Experience at Goldman Sachs, Accenture, and Toyota. Operations, technology, and community builder.",
   openGraph: {
-    title: "Gustavo Torres — Portfolio",
+    title: "Gustavo A. Torres Murphy — Portfolio",
     description:
       "Industrial Engineering student at Georgia Tech. Experience at Goldman Sachs, Accenture, and Toyota.",
     url: "https://resume-portfolio-xi-kohl.vercel.app",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gustavo Torres — Portfolio",
+    title: "Gustavo A. Torres Murphy — Portfolio",
     description:
       "Industrial Engineering student at Georgia Tech. Experience at Goldman Sachs, Accenture, and Toyota.",
     images: ["/images/avatar.jpg"],
