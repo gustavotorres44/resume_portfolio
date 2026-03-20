@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { personal } from "@/data/personal";
+import { CopyEmail } from "@/components/ui/CopyEmail";
 
 export default function AboutPage() {
   return (
@@ -120,12 +121,7 @@ export default function AboutPage() {
           Connect
         </h2>
         <div className="flex gap-4 flex-wrap">
-          <a
-            href={`mailto:${personal.email}`}
-            className="px-5 py-3 rounded-lg border border-[var(--border)] text-sm font-semibold font-body hover:bg-[var(--bg-secondary)] transition-colors"
-          >
-            {personal.email}
-          </a>
+          <CopyEmail email={personal.email} />
           <a
             href={personal.links.linkedin}
             target="_blank"
