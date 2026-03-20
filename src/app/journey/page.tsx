@@ -12,6 +12,7 @@ const stops = [
     id: "pr",
     city: "Puerto Rico",
     label: "Hometown",
+    countryId: "630",
     coordinates: [-66.5, 18.2] as [number, number],
     zoom: { center: [-66.5, 18.2] as [number, number], scale: 1800 },
     year: "2004 – 2022",
@@ -67,6 +68,7 @@ const stops = [
     id: "de",
     city: "Vallendar, Germany",
     label: "WHU Exchange",
+    countryId: "276",
     coordinates: [7.6, 50.4] as [number, number],
     zoom: { center: [7.6, 50.4] as [number, number], scale: 1400 },
     year: "Jan – Apr 2025",
@@ -264,21 +266,24 @@ export default function JourneyPage() {
               style={{ width: "100%", height: "auto", background: "var(--bg-primary)" }}
             >
               <Geographies geography={GEO_URL}>
-                {({ geographies }: { geographies: { rsmKey: string; [key: string]: unknown }[] }) =>
-                  geographies.map((geo) => (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      fill={isDark ? "#2a2a2a" : "#c8cdd5"}
-                      stroke={isDark ? "#3a3a3a" : "#a0a8b4"}
-                      strokeWidth={0.5}
-                      style={{
-                        default: { outline: "none" },
-                        hover: { outline: "none" },
-                        pressed: { outline: "none" },
-                      }}
-                    />
-                  ))
+                {({ geographies }: { geographies: { rsmKey: string; id?: string | number; [key: string]: unknown }[] }) =>
+                  geographies.map((geo) => {
+                    const isHighlighted = "countryId" in (activeStop ?? {}) && (activeStop as { countryId?: string }).countryId === String(geo.id);
+                    return (
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        fill={isHighlighted ? `${activeStop!.color}30` : (isDark ? "#2a2a2a" : "#c8cdd5")}
+                        stroke={isHighlighted ? activeStop!.color : (isDark ? "#3a3a3a" : "#a0a8b4")}
+                        strokeWidth={isHighlighted ? 1.5 : 0.5}
+                        style={{
+                          default: { outline: "none" },
+                          hover: { outline: "none" },
+                          pressed: { outline: "none" },
+                        }}
+                      />
+                    );
+                  })
                 }
               </Geographies>
 
