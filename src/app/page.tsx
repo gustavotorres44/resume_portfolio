@@ -3,6 +3,7 @@ import Image from "next/image";
 import { personal } from "@/data/personal";
 import { experiences } from "@/data/experience";
 import { projects } from "@/data/projects";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured);
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
       {/* Hero */}
+      <FadeIn>
       <section className="mb-20">
         <div className="flex items-center gap-6 mb-6">
           <Image

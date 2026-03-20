@@ -4,6 +4,23 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { getBotResponse, newId, type Message } from "@/lib/chatbot";
 
+const ROUTES = ["/experience", "/projects", "/skills", "/journey", "/about", "/resume"];
+
+function renderText(text: string, onNav: () => void) {
+  const clean = text.replace(/\*\*(.*?)\*\*/g, "$1");
+  const regex = /(\/(?:experience|projects|skills|journey|about|resume))/g;
+  const parts = clean.split(regex);
+  return parts.map((part, i) =>
+    ROUTES.includes(part) ? (
+      <Link key={i} href={part} onClick={onNav} className="font-semibold text-[var(--accent)] hover:underline">
+        {part.slice(1)}
+      </Link>
+    ) : (
+      part
+    )
+  );
+}
+
 const WELCOME: Message = {
   id: "welcome",
   role: "bot",
@@ -79,7 +96,7 @@ export function ChatWidget() {
                       : "bg-[var(--bg-secondary)] text-[var(--text-primary)] rounded-bl-sm"
                   }`}
                 >
-                  {msg.text.replace(/\*\*(.*?)\*\*/g, "$1")}
+                  {renderText(msg.text, () => setOpen(false))}
                 </div>
 
                 {/* Link button */}
