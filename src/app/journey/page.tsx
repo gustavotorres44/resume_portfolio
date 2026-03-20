@@ -25,6 +25,7 @@ const stops = [
     id: "atl",
     city: "Atlanta, GA",
     label: "Georgia Tech",
+    stateName: "Georgia",
     coordinates: [-84.4, 33.7] as [number, number],
     zoom: { center: [-84.4, 33.7] as [number, number], scale: 1200 },
     year: "Aug 2022 – Present",
@@ -38,6 +39,7 @@ const stops = [
     id: "ky",
     city: "Georgetown, KY",
     label: "Toyota TMMK",
+    stateName: "Kentucky",
     coordinates: [-84.6, 38.2] as [number, number],
     zoom: { center: [-84.6, 38.2] as [number, number], scale: 1200 },
     year: "May – Aug 2023",
@@ -51,6 +53,7 @@ const stops = [
     id: "tx",
     city: "San Antonio, TX",
     label: "Toyota TMMTX",
+    stateName: "Texas",
     coordinates: [-98.5, 29.4] as [number, number],
     zoom: { center: [-98.5, 29.4] as [number, number], scale: 1200 },
     year: "Jan – Apr 2024",
@@ -77,6 +80,7 @@ const stops = [
     id: "bos",
     city: "Boston, MA",
     label: "Accenture",
+    stateName: "Massachusetts",
     coordinates: [-71.1, 42.4] as [number, number],
     zoom: { center: [-71.1, 42.4] as [number, number], scale: 1400 },
     year: "Jun – Aug 2025",
@@ -90,6 +94,7 @@ const stops = [
     id: "slc",
     city: "Salt Lake City, UT",
     label: "Goldman Sachs",
+    stateName: "Utah",
     coordinates: [-111.9, 40.8] as [number, number],
     zoom: { center: [-111.9, 40.8] as [number, number], scale: 1200 },
     year: "Jun – Aug 2026",
@@ -278,21 +283,24 @@ export default function JourneyPage() {
               </Geographies>
 
               <Geographies geography={US_STATES_URL}>
-                {({ geographies }: { geographies: { rsmKey: string; [key: string]: unknown }[] }) =>
-                  geographies.map((geo) => (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      fill="transparent"
-                      stroke={activeStop?.color ?? (isDark ? "#3a3a3a" : "#a0a8b4")}
-                      strokeWidth={0.8}
-                      style={{
-                        default: { outline: "none" },
-                        hover: { outline: "none" },
-                        pressed: { outline: "none" },
-                      }}
-                    />
-                  ))
+                {({ geographies }: { geographies: { rsmKey: string; properties: { name: string }; [key: string]: unknown }[] }) =>
+                  geographies.map((geo) => {
+                    const isHighlighted = "stateName" in (activeStop ?? {}) && (activeStop as { stateName?: string }).stateName === geo.properties.name;
+                    return (
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        fill={isHighlighted ? `${activeStop!.color}25` : "transparent"}
+                        stroke={isHighlighted ? activeStop!.color : (isDark ? "#3a3a3a" : "#a0a8b4")}
+                        strokeWidth={isHighlighted ? 1.5 : 0.5}
+                        style={{
+                          default: { outline: "none" },
+                          hover: { outline: "none" },
+                          pressed: { outline: "none" },
+                        }}
+                      />
+                    );
+                  })
                 }
               </Geographies>
 
