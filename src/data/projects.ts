@@ -22,6 +22,24 @@ export interface ProjectEntry {
 
 export const projects: ProjectEntry[] = [
   {
+    id: "proj-internnest",
+    title: "InternNest",
+    tagline: "A platform helping interns find subleases, navigate transit, and build community in new cities.",
+    description: `The problem: Every summer, thousands of interns relocate to cities they've never lived in. They're scrambling to find short-term housing, figure out transit, and meet people — all while starting a new job.
+
+We built InternNest to solve this. The platform matches interns with neighborhoods based on their commute, budget, and priorities, surfaces transit tips from past interns, and connects them with a community of other interns in their city.
+
+Currently at MVP stage — more updates coming soon.`,
+    role: "Co-founder & Developer",
+    timeline: "Jan 2026 – Present",
+    skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"],
+    links: {
+      github: "https://github.com/gustavotorres44/InternNest",
+      live: "https://intern-nest-psi.vercel.app",
+    },
+    featured: true,
+  },
+  {
     id: "proj-sideraceros",
     title: "Sideraceros Logistics Modernization",
     tagline: "Route optimization and customer prioritization strategy for a steel distributor with a 3-truck fleet.",
@@ -52,23 +70,5 @@ This project deepened my understanding of real-world ML pipelines, the messiness
     timeline: "Aug 2024 – Dec 2024",
     skills: ["Python", "Pandas", "Convolutional Neural Networks", "Data Cleaning", "Machine Learning", "Medical AI", "Data Fusion"],
     featured: false,
-  },
-  {
-    id: "proj-internnest",
-    title: "InternNest",
-    tagline: "A platform helping interns find subleases, navigate transit, and build community in new cities.",
-    description: `The problem: Every summer, thousands of interns relocate to cities they've never lived in. They're scrambling to find short-term housing, figure out transit, and meet people — all while starting a new job.
-
-We built InternNest to solve this. The platform matches interns with neighborhoods based on their commute, budget, and priorities, surfaces transit tips from past interns, and connects them with a community of other interns in their city.
-
-Currently at MVP stage — more updates coming soon.`,
-    role: "Co-founder & Developer",
-    timeline: "Jan 2026 – Present",
-    skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"],
-    links: {
-      github: "https://github.com/gustavotorres44/InternNest",
-      live: "https://intern-nest-psi.vercel.app",
-    },
-    featured: true,
   },
 ];
