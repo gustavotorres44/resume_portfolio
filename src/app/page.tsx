@@ -101,7 +101,7 @@ export default function Home() {
         <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
           Currently Building
         </h2>
-        <div className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 overflow-hidden flex flex-col md:flex-row">
+        <Link href="/projects" className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 overflow-hidden flex flex-col md:flex-row hover:border-[var(--accent)] transition-colors group">
           <div className="p-6 flex flex-col justify-between flex-1">
             <div>
               <div className="flex items-center gap-2 mb-1">
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="md:w-72 shrink-0 border-t md:border-t-0 md:border-l border-[var(--accent)]/20 overflow-hidden">
             <img src="/images/landingpage.jpeg" alt="InternNest landing page" className="w-full h-full object-cover object-top" />
           </div>
-        </div>
+        </Link>
       </section>
 
       {/* Latest Role */}
