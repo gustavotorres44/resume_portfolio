@@ -19,6 +19,8 @@ export interface ProjectEntry {
   images?: string[];
   featured?: boolean;
   highlights?: { value: string; label: string }[];
+  approach?: { title: string; description: string }[];
+  caseStudyPdf?: string;
 }
 
 export const projects: ProjectEntry[] = [
@@ -48,23 +50,42 @@ Currently at MVP stage — more updates coming soon.`,
   },
   {
     id: "proj-sideraceros",
-    title: "Sideraceros Logistics Modernization",
-    tagline: "Route optimization and customer prioritization strategy for a Madrid-based steel distributor with a 3-truck fleet.",
-    description: `The problem: Sideraceros, a steel distributor based in Madrid, Spain with 50+ employees and a 3-truck fleet, was losing time and money to manual route planning. Emergency re-routing occurred daily, causing delivery delays and inflated fuel costs.
+    title: "Sideraceros at a Crossroads",
+    tagline: "Route optimization and customer prioritization strategy for a Madrid-based steel distributor — developed as a formal case study at WHU Otto Beisheim School of Management.",
+    description: `Sideraceros is a steel products distributor based in Madrid, Spain, specializing in metal structure, machinery, and automotive industries. A family business turned mid-size operation with 50 employees and 3 trucks, they supply specialized alloys and high-strength steel to clients across the greater Madrid area.
 
-As part of my exchange semester at WHU – Otto Beisheim School of Management in Vallendar, Germany, I took on the role of Lead Analyst and spent three months analyzing 90+ daily delivery logs to assess truck utilization, routing inefficiencies, and emergency handling patterns.
+In March 2025, Sideraceros landed a major construction client with strict delivery windows — exposing a critical flaw in their operations. Every morning, Ana, the operations lead, would write the day's delivery routes on a piece of paper based on experience alone. No digitized records, no optimization model, and emergencies handled by scribbling changes on the same paper mid-route. The system worked at small scale, but was now a liability.
 
-My approach involved modeling delivery flows using Vehicle Routing Problem (VRP) frameworks. I demonstrated that just 15 delivery nodes yield 6×10¹¹ possible route combinations, making it mathematically clear why manual planning was failing. From there I proposed two solutions: a Pareto-based customer prioritization system to protect Tier 1 client relationships, and a route optimization strategy integrating Dijkstra's Algorithm with real-time traffic and delay data.
+The first step was digitizing 90+ handwritten delivery logs — referred to internally as the "pink pages" — the only record of three months of truck operations. This revealed the mathematical reality of the problem: with just 15 delivery nodes, there are 6 × 10¹¹ possible route combinations, calculated by the formula (n−1)!/2. Manual planning wasn't just inefficient — it was mathematically impossible to do optimally at scale.
 
-The results: Tier 1 client service reliability improved by 30%, projected delivery delays cut by 25%, weekly emergency route changes reduced by 40%, and potential fuel and driver hour savings identified, all while allowing the company to defer additional truck purchases.`,
+Using the Pareto principle, we segmented Sideraceros' 93 clients into three priority tiers based on delivery frequency. Analysis of the first 60 delivery sheets identified the top 10 customers — Tubos Paris, Dayroa, Hipur, Greymet, Eurotramex, and others — accounting for 36% of all deliveries. Tier 1 customers (Tubos Paris and Dayroa) alone represented 30% of top-10 delivery volume and received first-priority routing in all scenarios.
+
+With tiers established, we designed a route optimization strategy integrating Dijkstra's Algorithm. Each delivery node is assigned a weight based on customer priority, distance, historical delay data, and time-of-day traffic patterns across Madrid. The algorithm calculates the optimal path while allowing real-time adjustments — ensuring Tier 1 clients always receive priority service without significantly increasing total kilometers driven.
+
+The resulting framework gave Sideraceros a scalable, data-driven alternative to gut-feel routing — one designed to grow with the company as order volumes and client complexity increased.`,
     role: "Lead Analyst",
     timeline: "Jan 2025 – Apr 2025",
     skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research", "Pareto Analysis"],
     featured: true,
+    caseStudyPdf: "/Final%20Case%20Study%20.pdf",
     highlights: [
       { value: "30%", label: "Better Tier 1 reliability" },
       { value: "25%", label: "Fewer delivery delays" },
       { value: "40%", label: "Fewer emergency re-routes" },
+    ],
+    approach: [
+      {
+        title: "Digitize the Data",
+        description: "Analyzed and digitized 90+ handwritten daily delivery logs — the only operational record Sideraceros had. Structured the data to uncover routing patterns, truck utilization rates, and the frequency of mid-day emergency re-routes.",
+      },
+      {
+        title: "Customer Prioritization via Pareto",
+        description: "Segmented 93 clients into 3 tiers using the Pareto principle. The top 10 customers accounted for 36% of all deliveries. Tier 1 (Tubos Paris and Dayroa) represented 30% of top-10 volume — these clients received guaranteed first-priority routing in all scenarios.",
+      },
+      {
+        title: "Route Optimization via Dijkstra's Algorithm",
+        description: "Designed a weighted routing system where each delivery node is scored by customer tier, distance, historical delay patterns, and Madrid traffic data by time of day. Dijkstra's Algorithm finds the optimal path, replacing Ana's manual process with a systematic, real-time-adjustable framework.",
+      },
     ],
   },
   {
