@@ -138,6 +138,38 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
         </div>
       </div>
 
+      {/* Additional attachments */}
+      {project.attachments && project.attachments.length > 0 && (
+        <div className="mb-12">
+          {project.attachments.map((doc) => (
+            <div key={doc.url}>
+              <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-4 font-body">
+                {doc.title}
+              </h2>
+              <div className="rounded-2xl border border-[var(--border)] overflow-hidden bg-[var(--bg-secondary)]">
+                <div className="px-5 py-3 border-b border-[var(--border)] flex items-center justify-between">
+                  <p className="text-sm font-semibold font-body text-[var(--text-secondary)]">{doc.title}</p>
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold font-body text-[var(--accent)] hover:underline"
+                  >
+                    Open in new tab ↗
+                  </a>
+                </div>
+                <iframe
+                  src={doc.url}
+                  className="w-full"
+                  style={{ height: "900px" }}
+                  title={doc.title}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Embedded PDF */}
       {project.caseStudyPdf && (
         <div>

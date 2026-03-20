@@ -21,6 +21,7 @@ export interface ProjectEntry {
   highlights?: { value: string; label: string }[];
   approach?: { title: string; description: string }[];
   caseStudyPdf?: string;
+  attachments?: { title: string; url: string }[];
 }
 
 export const projects: ProjectEntry[] = [
@@ -68,6 +69,9 @@ The resulting framework gave Sideraceros a scalable, data-driven alternative to 
     skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research", "Pareto Analysis"],
     featured: true,
     caseStudyPdf: "/Final%20Case%20Study%20.pdf",
+    attachments: [
+      { title: "Customer Priority Analysis", url: "/Customer%20Priority%20Doc.pdf" },
+    ],
     highlights: [
       { value: "30%", label: "Better Tier 1 reliability" },
       { value: "25%", label: "Fewer delivery delays" },
