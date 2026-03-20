@@ -138,41 +138,9 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
         </div>
       </div>
 
-      {/* Additional attachments */}
-      {project.attachments && project.attachments.length > 0 && (
-        <div className="mb-12">
-          {project.attachments.map((doc) => (
-            <div key={doc.url}>
-              <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-4 font-body">
-                {doc.title}
-              </h2>
-              <div className="rounded-2xl border border-[var(--border)] overflow-hidden bg-[var(--bg-secondary)]">
-                <div className="px-5 py-3 border-b border-[var(--border)] flex items-center justify-between">
-                  <p className="text-sm font-semibold font-body text-[var(--text-secondary)]">{doc.title}</p>
-                  <a
-                    href={doc.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-semibold font-body text-[var(--accent)] hover:underline"
-                  >
-                    Open in new tab ↗
-                  </a>
-                </div>
-                <iframe
-                  src={doc.url}
-                  className="w-full"
-                  style={{ height: "900px" }}
-                  title={doc.title}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* Embedded PDF */}
+      {/* Embedded PDF — Case Study */}
       {project.caseStudyPdf && (
-        <div>
+        <div className="mb-12">
           <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-4 font-body">
             Full Case Study
           </h2>
@@ -194,6 +162,50 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
               style={{ height: "900px" }}
               title="Sideraceros Case Study"
             />
+          </div>
+        </div>
+      )}
+
+      {/* Appendix / Additional Documents */}
+      {project.attachments && project.attachments.length > 0 && (
+        <div>
+          <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+            Appendix
+          </h2>
+          <div className="flex flex-col gap-10">
+            {project.attachments.map((doc) => (
+              <div key={doc.url}>
+                <div className="flex items-start justify-between gap-4 flex-wrap mb-1">
+                  <div>
+                    <p className="font-semibold font-body text-[var(--text-primary)]">{doc.title}</p>
+                    {doc.language && (
+                      <span className="inline-block mt-1 px-2 py-0.5 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-semibold font-body">
+                        Conducted in {doc.language}
+                      </span>
+                    )}
+                    {doc.description && (
+                      <p className="text-sm text-[var(--text-secondary)] font-body mt-1">{doc.description}</p>
+                    )}
+                  </div>
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold font-body text-[var(--accent)] hover:underline shrink-0"
+                  >
+                    Open in new tab ↗
+                  </a>
+                </div>
+                <div className="rounded-2xl border border-[var(--border)] overflow-hidden bg-[var(--bg-secondary)] mt-3">
+                  <iframe
+                    src={doc.url}
+                    className="w-full"
+                    style={{ height: "700px" }}
+                    title={doc.title}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}

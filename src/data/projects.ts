@@ -21,7 +21,7 @@ export interface ProjectEntry {
   highlights?: { value: string; label: string }[];
   approach?: { title: string; description: string }[];
   caseStudyPdf?: string;
-  attachments?: { title: string; url: string }[];
+  attachments?: { title: string; url: string; language?: string; description?: string }[];
 }
 
 export const projects: ProjectEntry[] = [
@@ -63,14 +63,31 @@ Using the Pareto principle, we segmented Sideraceros' 93 clients into three prio
 
 With tiers established, we designed a route optimization strategy integrating Dijkstra's Algorithm. Each delivery node is assigned a weight based on customer priority, distance, historical delay data, and time-of-day traffic patterns across Madrid. The algorithm calculates the optimal path while allowing real-time adjustments — ensuring Tier 1 clients always receive priority service without significantly increasing total kilometers driven.
 
-The resulting framework gave Sideraceros a scalable, data-driven alternative to gut-feel routing — one designed to grow with the company as order volumes and client complexity increased.`,
+The resulting framework gave Sideraceros a scalable, data-driven alternative to gut-feel routing — one designed to grow with the company as order volumes and client complexity increased.
+
+The project was developed as a formal case study at WHU Otto Beisheim School of Management, including a full teaching note prepared for faculty use and a supplementary process analysis document (conducted in Spanish) documenting the analytical methodology behind the customer segmentation.`,
     role: "Lead Analyst",
     timeline: "Jan 2025 – Apr 2025",
     skills: ["VRP Modeling", "Dijkstra's Algorithm", "Data Analysis", "Logistics Optimization", "Excel", "Operations Research", "Pareto Analysis"],
     featured: true,
     caseStudyPdf: "/Final%20Case%20Study%20.pdf",
     attachments: [
-      { title: "Customer Priority Analysis", url: "/Customer%20Priority%20Doc.pdf" },
+      {
+        title: "Customer Priority Analysis",
+        url: "/Customer%20Priority%20Doc.pdf",
+        description: "Detailed breakdown of the 93-client segmentation into Tier 1, 2, and 3 priority groups using the Pareto principle.",
+      },
+      {
+        title: "Final Teaching Note",
+        url: "/Final%20Teaching%20Note%20.pdf",
+        description: "Instructor guide developed for WHU faculty, outlining discussion questions, key decision points, and pedagogical structure for the case.",
+      },
+      {
+        title: "Proceso de Análisis de Sideraceros",
+        url: "/PROCESO%20DE%20AN%C3%81LISIS%20DE%20SIDERACEROS%20%28PREGUNTAS%20JAIME%29.pdf",
+        language: "Spanish",
+        description: "Supplementary analytical process document covering the methodology behind the customer segmentation and routing framework. Conducted in Spanish.",
+      },
     ],
     highlights: [
       { value: "30%", label: "Better Tier 1 reliability" },
@@ -89,6 +106,10 @@ The resulting framework gave Sideraceros a scalable, data-driven alternative to 
       {
         title: "Route Optimization via Dijkstra's Algorithm",
         description: "Designed a weighted routing system where each delivery node is scored by customer tier, distance, historical delay patterns, and Madrid traffic data by time of day. Dijkstra's Algorithm finds the optimal path, replacing Ana's manual process with a systematic, real-time-adjustable framework.",
+      },
+      {
+        title: "Teaching Note & Faculty Framework",
+        description: "Developed a formal teaching note for WHU faculty outlining how to guide students through the case — covering discussion questions, key decision points, and the pedagogical structure behind the Pareto segmentation and Dijkstra routing methodology.",
       },
     ],
   },
