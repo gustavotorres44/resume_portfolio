@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { ComposableMap, Geographies, Geography, Marker, Line } from "react-simple-maps";
 
-const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 const US_STATES_URL = "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json";
 const OVERVIEW = { center: [-52, 36] as [number, number], scale: 290 };
 
