@@ -70,7 +70,7 @@ export default function ProjectsPage() {
             )}
 
             <div className="text-sm font-semibold text-[var(--accent)] font-body self-center shrink-0 group-hover:underline">
-              View case study →
+              View project →
             </div>
           </Link>
         ))}
