@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ChatWidget } from "@/components/chat/ChatWidget";
+import { PageTransition } from "@/components/ui/PageTransition";
 
 const displayFont = Libre_Baskerville({
   subsets: ["latin"],
@@ -63,7 +64,7 @@ export default function RootLayout({
     <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <body className="font-body antialiased">
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen"><PageTransition>{children}</PageTransition></main>
         <Footer />
         <ChatWidget />
       </body>
