@@ -10,8 +10,8 @@ export default function ProjectsPage() {
         What I&apos;ve built.
       </h1>
       <p className="text-[var(--text-secondary)] font-body mb-12 max-w-lg">
-        Deep dives into the projects I&apos;m most proud of — the problems, the
-        process, and what I learned.
+        Deep dives into the projects I&apos;m most proud of: the problems, the
+        process, and what I took away.
       </p>
 
       <div className="flex flex-col gap-10">

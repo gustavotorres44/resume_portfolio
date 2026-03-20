@@ -5,19 +5,25 @@ import { skillCategories, certifications } from "@/data/skills";
 
 type Tab = "skills" | "certifications";
 
+const TAB_LABELS: Record<Tab, string> = {
+  skills: "Skills",
+  certifications: "Certifications",
+};
+
+
 export default function SkillsPage() {
   const [activeTab, setActiveTab] = useState<Tab>("skills");
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
       <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-4 font-body">
-        Skills & Certifications
+        Skills & More
       </p>
       <h1 className="font-display text-3xl md:text-4xl leading-tight mb-4">
         What I bring to the table.
       </h1>
       <p className="text-[var(--text-secondary)] font-body mb-10 max-w-lg">
-        Every skill is linked to where I actually used it — proof over lists.
+        Every skill is linked to where I actually used it. Proof over lists.
       </p>
 
       {/* Tab toggle */}
@@ -26,13 +32,13 @@ export default function SkillsPage() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-5 py-2 rounded-lg text-sm font-semibold font-body capitalize transition-colors ${
+            className={`px-5 py-2 rounded-lg text-sm font-semibold font-body transition-colors ${
               activeTab === tab
                 ? "bg-[var(--bg-primary)] text-[var(--text-primary)] shadow-sm"
                 : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
             }`}
           >
-            {tab}
+            {TAB_LABELS[tab]}
           </button>
         ))}
       </div>
@@ -77,7 +83,6 @@ export default function SkillsPage() {
             >
               {cert.logo && (
                 <div className="w-10 h-10 rounded-lg border border-[var(--border)] bg-white flex items-center justify-center shrink-0 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={cert.logo} alt={cert.issuer} width={28} height={28} className="object-contain" />
                 </div>
               )}

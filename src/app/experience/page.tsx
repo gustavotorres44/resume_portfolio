@@ -1,6 +1,8 @@
 "use client";
 
 import { experiences, ExperienceEntry } from "@/data/experience";
+import { conferences } from "@/data/skills";
+import { PhotoGallery } from "@/components/ui/PhotoGallery";
 
 function ExperienceCard({ exp }: { exp: ExperienceEntry }) {
   return (
@@ -89,6 +91,7 @@ function ExperienceCard({ exp }: { exp: ExperienceEntry }) {
 const sections = [
   { id: "upcoming", label: "Upcoming" },
   { id: "professional", label: "Professional" },
+  { id: "conferences", label: "Conferences" },
   { id: "campus", label: "Campus" },
 ];
 
@@ -107,11 +110,10 @@ export default function ExperiencePage() {
         Experience
       </p>
       <h1 className="font-display text-3xl md:text-4xl leading-tight mb-4">
-        Where I&apos;ve worked.
+        Where I&apos;ve worked and shown up.
       </h1>
       <p className="text-[var(--text-secondary)] font-body mb-8 max-w-lg">
-        More depth than a resume, more context than LinkedIn. Here&apos;s what I
-        actually did — and what I learned.
+        From internships to career fairs, here&apos;s where I&apos;ve put in the work — in the office, on campus, and on the conference floor.
       </p>
 
       {/* Section toggle */}
@@ -178,6 +180,58 @@ export default function ExperiencePage() {
         <div className="flex flex-col gap-8">
           {professional.map((exp) => (
             <ExperienceCard key={exp.id} exp={exp} />
+          ))}
+        </div>
+      </section>
+
+      {/* Conferences */}
+      <section id="conferences" className="mb-16 scroll-mt-24">
+        <h2 className="font-display text-xl mb-6 pb-3 border-b border-[var(--border)]">
+          Conferences
+        </h2>
+        <div className="flex flex-col gap-8">
+          {conferences.map((conf) => (
+            <div
+              key={`${conf.name}-${conf.year}`}
+              className="p-6 md:p-8 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)]/30 transition-colors"
+            >
+              <div className="flex items-start justify-between gap-4 mb-5 flex-wrap">
+                <div>
+                  <h3 className="font-display text-xl mb-1">{conf.name}</h3>
+                  <p className="text-sm text-[var(--text-secondary)] font-body">
+                    {conf.location} · {conf.year}
+                  </p>
+                </div>
+                <span className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-semibold font-body text-[var(--text-secondary)] shrink-0">
+                  {conf.year}
+                </span>
+              </div>
+
+              <p className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-3 font-body">
+                Interviewed With
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                {conf.interviews.map((interview) => (
+                  <div
+                    key={interview.company}
+                    className="flex items-center gap-2 px-3 py-2 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={interview.logo} alt={interview.company} className="w-5 h-5 object-contain rounded" />
+                    <span className="text-sm font-semibold font-body text-[var(--text-primary)]">
+                      {interview.company}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {conf.images && conf.images.length > 0 && (
+                <PhotoGallery
+                  images={conf.images}
+                  title={`${conf.name}, ${conf.location} ${conf.year}`}
+                />
+              )}
+            </div>
           ))}
         </div>
       </section>

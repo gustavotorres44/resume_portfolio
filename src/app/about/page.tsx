@@ -89,7 +89,7 @@ export default function AboutPage() {
           <div>
             <h3 className="font-display text-lg mb-2">Puerto Rico 🇵🇷</h3>
             <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed">
-              I was born and raised in Puerto Rico — an island that shaped how I see community, culture, and resilience. It&apos;s a big part of why I co-founded BORI at Georgia Tech and why representing the Puerto Rican diaspora in spaces like finance and engineering matters to me.
+              I was born and raised in Puerto Rico, an island that shaped how I see community, culture, and resilience. It&apos;s a big part of why I co-founded BORI at Georgia Tech and why representing the Puerto Rican diaspora in spaces like finance and engineering matters to me.
             </p>
           </div>
         </div>
