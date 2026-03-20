@@ -78,7 +78,7 @@ export function ChatWidget() {
       {/* Floating button */}
       <button
         onClick={() => { setOpen((o) => !o); setShowTooltip(false); }}
-        className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-[var(--text-primary)] text-white shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity"
+        className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-[var(--accent)] text-white shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity"
         aria-label="Open chat"
       >
         {open ? (
@@ -97,7 +97,7 @@ export function ChatWidget() {
         <div className="fixed bottom-[5rem] right-6 z-50 w-80 max-h-[70vh] flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--bg-primary)] shadow-2xl overflow-hidden">
           {/* Header */}
           <div className="px-4 py-3 border-b border-[var(--border)] flex items-center gap-3">
-            <div className="w-7 h-7 rounded-full bg-[var(--text-primary)] flex items-center justify-center text-white text-xs font-bold font-body">
+            <div className="w-7 h-7 rounded-full bg-[var(--accent)] flex items-center justify-center text-white text-xs font-bold font-body">
               G
             </div>
             <div>
@@ -113,7 +113,7 @@ export function ChatWidget() {
                 <div
                   className={`px-3 py-2 rounded-2xl text-sm font-body max-w-[85%] leading-relaxed ${
                     msg.role === "user"
-                      ? "bg-[var(--text-primary)] text-white rounded-br-sm"
+                      ? "bg-[var(--accent)] text-white rounded-br-sm"
                       : "bg-[var(--bg-secondary)] text-[var(--text-primary)] rounded-bl-sm"
                   }`}
                 >
@@ -175,7 +175,7 @@ export function ChatWidget() {
             <button
               onClick={() => send(input)}
               disabled={!input.trim() || loading}
-              className="px-3 py-2 rounded-lg bg-[var(--text-primary)] text-white text-sm font-body disabled:opacity-40 hover:opacity-90 transition-opacity"
+              className="px-3 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-body disabled:opacity-40 hover:opacity-90 transition-opacity"
             >
               ↑
             </button>

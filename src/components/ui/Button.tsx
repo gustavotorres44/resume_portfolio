@@ -20,7 +20,7 @@ export function Button({
   const base = "px-6 py-3 rounded-lg text-sm font-semibold font-body transition-all inline-flex items-center gap-2";
   const styles =
     variant === "primary"
-      ? "bg-[var(--text-primary)] text-white hover:opacity-90"
+      ? "bg-[var(--accent)] text-white hover:opacity-90"
       : "border border-[var(--border)] hover:bg-[var(--bg-secondary)]";
 
   if (href && external) {

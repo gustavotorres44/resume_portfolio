@@ -66,7 +66,7 @@ export default function ProjectsPage() {
                     href={project.links.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg bg-[var(--text-primary)] text-white text-sm font-semibold font-body hover:opacity-90 transition-opacity"
+                    className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body hover:opacity-90 transition-opacity"
                   >
                     Live Site ↗
                   </a>

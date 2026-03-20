@@ -18,7 +18,7 @@ export default function ResumePage() {
         <a
           href="/resume.pdf"
           download
-          className="px-6 py-3 bg-[var(--text-primary)] text-white rounded-lg text-sm font-semibold font-body hover:opacity-90 transition-opacity flex items-center gap-2"
+          className="px-6 py-3 bg-[var(--accent)] text-white rounded-lg text-sm font-semibold font-body hover:opacity-90 transition-opacity flex items-center gap-2"
         >
           ↓ Download PDF
         </a>
