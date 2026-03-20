@@ -3,7 +3,7 @@ import { personal } from "@/data/personal";
 
 export default function AboutPage() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24">
+    <div className="max-w-4xl mx-auto px-6 py-24">
       <div className="flex items-center gap-6 mb-8">
         <Image
           src="/images/avatar.jpg"

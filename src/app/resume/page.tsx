@@ -5,7 +5,7 @@ import { projects } from "@/data/projects";
 
 export default function ResumePage() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24">
+    <div className="max-w-4xl mx-auto px-6 py-24">
       <div className="flex justify-between items-start mb-12 flex-wrap gap-4">
         <div>
           <p className="text-sm font-semibold text-[var(--accent)] tracking-wide uppercase mb-4 font-body">
