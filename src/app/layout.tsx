@@ -23,7 +23,30 @@ const bodyFont = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Gustavo Torres — Portfolio",
   description:
-    "Personal portfolio and extended professional profile. Detailed work experience, project case studies, and more.",
+    "Industrial Engineering student at Georgia Tech. Experience at Goldman Sachs, Accenture, and Toyota. Operations, technology, and community builder.",
+  openGraph: {
+    title: "Gustavo Torres — Portfolio",
+    description:
+      "Industrial Engineering student at Georgia Tech. Experience at Goldman Sachs, Accenture, and Toyota.",
+    url: "https://resume-portfolio-xi-kohl.vercel.app",
+    siteName: "Gustavo Torres",
+    images: [
+      {
+        url: "/images/avatar.jpg",
+        width: 800,
+        height: 800,
+        alt: "Gustavo Torres",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gustavo Torres — Portfolio",
+    description:
+      "Industrial Engineering student at Georgia Tech. Experience at Goldman Sachs, Accenture, and Toyota.",
+    images: ["/images/avatar.jpg"],
+  },
 };
 
 export const viewport = {
