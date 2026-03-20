@@ -151,6 +151,40 @@ export default function Home() {
         </section>
       )}
 
+      {/* InternNest */}
+      <section className="mb-20">
+        <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+          Currently Building
+        </h2>
+        <div className="p-6 rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 group">
+          <div className="flex items-start justify-between gap-4 mb-3 flex-wrap">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="font-display text-xl">InternNest</h3>
+                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-600 font-body">Live</span>
+              </div>
+              <p className="text-sm text-[var(--text-secondary)] font-body">Co-founder & Developer · Jan 2026 – Present</p>
+            </div>
+            <a
+              href="https://intern-nest-psi.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body hover:opacity-90 transition-opacity shrink-0"
+            >
+              Visit Site ↗
+            </a>
+          </div>
+          <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed mb-4">
+            A platform helping interns find subleases, navigate transit, and build community in new cities. Built with Next.js, TypeScript, and Tailwind.
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            {["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"].map((s) => (
+              <span key={s} className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body">{s}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
         <section>
