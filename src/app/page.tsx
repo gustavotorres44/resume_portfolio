@@ -36,7 +36,7 @@ export default function Home() {
         <div className="flex gap-4 flex-wrap">
           <Link
             href="/about"
-            className="px-6 py-3 bg-[var(--text-primary)] text-white rounded-lg text-sm font-semibold font-body hover:opacity-90 transition-opacity"
+            className="px-6 py-3 bg-[var(--accent)] text-white rounded-lg text-sm font-semibold font-body hover:opacity-90 transition-opacity"
           >
             About Me
           </Link>

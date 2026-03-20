@@ -121,6 +121,15 @@ function easeInOutCubic(t: number) {
 export default function JourneyPage() {
   const [active, setActive] = useState<string | null>("pr");
   const [zoomed, setZoomed] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsDark(document.documentElement.classList.contains("dark"));
+    check();
+    const observer = new MutationObserver(check);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
 
   // Animated projection state
   const [projCenter, setProjCenter] = useState<[number, number]>(OVERVIEW.center);
@@ -254,8 +263,8 @@ export default function JourneyPage() {
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill="#c8cdd5"
-                      stroke="#a0a8b4"
+                      fill={isDark ? "#2a2a2a" : "#c8cdd5"}
+                      stroke={isDark ? "#3a3a3a" : "#a0a8b4"}
                       strokeWidth={0.5}
                       style={{
                         default: { outline: "none" },
@@ -272,7 +281,7 @@ export default function JourneyPage() {
                   key={i}
                   from={line[0]}
                   to={line[1]}
-                  stroke="rgba(0,0,0,0.15)"
+                  stroke={isDark ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)"}
                   strokeWidth={1}
                   strokeDasharray="5 4"
                   strokeLinecap="round"
