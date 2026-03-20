@@ -21,10 +21,14 @@ const bodyFont = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  // TODO: Replace with your actual info
-  title: "Your Name — Portfolio",
+  title: "Gustavo Torres — Portfolio",
   description:
     "Personal portfolio and extended professional profile. Detailed work experience, project case studies, and more.",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
