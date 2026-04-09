@@ -36,6 +36,8 @@ My engineering journey has taken me from the production floor at Toyota, where I
 
 Beyond engineering, I'm a community builder at heart. I co-founded BORI (Boricuas Organized For Impact) at Georgia Tech to celebrate Puerto Rican culture and create spaces for representation and connection on campus. I also serve as Head of Events for BRASA, leading a community of 150+ Brazilian students.
 
+Most recently, I competed in and won the inaugural SHPE VIBRA ATL Hackathon, where my team built Mani, a WhatsApp AI copilot for small business owners across Latin America. I led UI/UX design, frontend engineering, and brand identity. We are continuing to develop Mani with the goal of putting it in the hands of real businesses.
+
 I thrive at the intersection of technology, operations, and people. Whether that's optimizing a logistics system, mentoring students through SHPE, or designing cultural events that bring communities together.
 
 I speak Spanish, English, and Portuguese fluently, and conversational German, which has come in handy everywhere from exchange programs to international projects.`,

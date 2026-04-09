@@ -29,7 +29,7 @@ export const projects: ProjectEntry[] = [
     id: "proj-mani",
     title: "Mani",
     tagline: "1st Place at the Inaugural SHPE VIBRA ATL Hackathon. An intelligent multi-agent system helping small businesses in Latin America manage their finances and schedules, built to fit how they already work.",
-    description: `We won first place at the Inaugural SHPE VIBRA ATL Hackathon competing against teams from across Atlanta's SHPE chapters. Alongside my teammates Lucas Arano, Jeronimo Roldan, and Santiago de Grandchant, we built Mani in 24 hours and presented it to judges who saw the value it could bring to small businesses across Latin America.
+    description: `At the Inaugural SHPE VIBRA ATL Hackathon, my team took first place. Alongside Lucas Arano, Jeronimo Roldan, and Santiago de Grandchant, we had 24 hours to build something that mattered. We built Mani.
 
 Micro and small businesses across Latin America run on WhatsApp. Owners send voice notes, snap photos of receipts, and manage operations through quick texts in Spanish. The tools built for them rarely start from that reality.
 

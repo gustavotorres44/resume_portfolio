@@ -96,39 +96,34 @@ export default function Home() {
         </section>
       )}
 
-      {/* InternNest */}
+      {/* Mani */}
       <section className="mb-14">
         <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
           Currently Building
         </h2>
-        <Link href="/projects" className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 overflow-hidden flex flex-col md:flex-row hover:border-[var(--accent)] transition-colors group">
+        <Link href="/projects/proj-mani" className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 overflow-hidden flex flex-col md:flex-row hover:border-[var(--accent)] transition-colors group">
           <div className="p-6 flex flex-col justify-between flex-1">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <h3 className="font-display text-xl">InternNest</h3>
-                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-600 font-body">Live</span>
+                <h3 className="font-display text-xl">Mani</h3>
+                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-600 font-body">1st Place · SHPE VIBRA ATL Hackathon</span>
               </div>
-              <p className="text-sm text-[var(--text-secondary)] font-body mb-3">Co-founder & Developer · Jan 2026 – Present</p>
+              <p className="text-sm text-[var(--text-secondary)] font-body mb-3">UI/UX Designer & Frontend Engineer · Apr 2026 – Present</p>
               <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed mb-4">
-                A platform helping interns find subleases, navigate transit, and build community in new cities. Built with Next.js, TypeScript, and Tailwind.
+                A WhatsApp AI copilot built for micro and small business owners across Latin America. Voice notes, photos, quick texts in Spanish. No behavior change. Just clarity.
               </p>
               <div className="flex gap-2 flex-wrap mb-5">
-                {["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"].map((s) => (
+                {["UI/UX Design", "Design Systems", "HTML", "CSS", "React", "Brand Identity"].map((s) => (
                   <span key={s} className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body">{s}</span>
                 ))}
               </div>
             </div>
-            <a
-              href="https://intern-nest-psi.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body hover:opacity-90 transition-opacity w-fit"
-            >
-              Visit Site ↗
-            </a>
+            <span className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body w-fit">
+              View Project →
+            </span>
           </div>
           <div className="md:w-72 shrink-0 border-t md:border-t-0 md:border-l border-[var(--accent)]/20 overflow-hidden">
-            <img src="/images/landingpage.jpeg" alt="InternNest landing page" className="w-full h-full object-cover object-top" />
+            <img src="/images/mani.jpg" alt="Mani project" className="w-full h-full object-cover object-top" />
           </div>
         </Link>
       </section>
