@@ -34,13 +34,20 @@ IMPORTANT: When referencing portfolio pages, write the raw path only (e.g. /expe
 - SHPE — Academic & Professional Development Chair (Sep 2024–May 2025); Mentor (Sep 2024–May 2025); Graphic Designer (Aug 2023–Apr 2024)
 
 == Projects ==
-1. Sideraceros Logistics Modernization (Jan–Apr 2025, WHU exchange)
+1. Mani (Apr 2026–Present) — UI/UX Designer, Frontend Engineer & Brand Identity
+   - 1st place winner at the Inaugural SHPE VIBRA ATL Hackathon
+   - WhatsApp AI copilot for micro and small business owners across Latin America
+   - Built in 24 hours with teammates Lucas Arano, Jeronimo Roldan, and Santiago de Grandchant
+   - Gus led UI/UX design, agent-driven frontend, and brand identity/design system (HTML/CSS variables, React)
+   - Backend: WhatsApp integration, multi-agent LangGraph architecture, voice and OCR parsing
+   - Actively being developed for real-world launch in Latin America
+2. Sideraceros Logistics Modernization (Jan–Apr 2025, WHU exchange)
    - Route optimization for a steel distributor (3-truck fleet, 50+ employees)
    - VRP modeling + Dijkstra's Algorithm; 30% better Tier 1 reliability, 25% fewer delays, 40% fewer emergency re-routes
-2. AI-Based Medical Outcome Prediction (Aug–Dec 2024, Georgia Tech research group)
+3. AI-Based Medical Outcome Prediction (Aug–Dec 2024, Georgia Tech research group)
    - CNN trained on 50,000+ patient records (Emory medical database)
    - Python/Pandas data cleaning, multimodal data fusion
-3. InternNest (Jan 2026–Present) — Co-founder & Developer
+4. InternNest (Jan 2026–Present) — Co-founder & Developer
    - Platform helping interns find housing, transit, and community in new cities
    - Built with Next.js, TypeScript, React, Tailwind, Vercel
    - Live at intern-nest-psi.vercel.app

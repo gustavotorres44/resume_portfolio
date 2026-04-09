@@ -27,6 +27,7 @@ const SUGGESTION_INTENTS: Record<string, string> = {
   "Accenture": "tell me about accenture",
   "Toyota": "tell me about toyota",
   "Goldman Sachs": "tell me about goldman sachs",
+  "Mani": "tell me about the mani project",
   "InternNest": "what is internnest",
   "BORI": "tell me about bori",
   "BRASA": "tell me about brasa",
