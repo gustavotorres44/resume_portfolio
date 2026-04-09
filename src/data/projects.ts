@@ -28,47 +28,46 @@ export const projects: ProjectEntry[] = [
   {
     id: "proj-mani",
     title: "Mani",
-    tagline: "A WhatsApp AI copilot built for micro and small business owners across Latin America — voice notes, photos, quick texts. No behavior change. Just clarity.",
-    description: `Micro and small businesses across Latin America run on WhatsApp. Owners send voice notes, snap photos of receipts, and manage operations through quick texts in Spanish. The tools built for them rarely start from that reality.
+    tagline: "1st Place at the Inaugural SHPE VIBRA ATL Hackathon. An intelligent multi-agent system helping small businesses in Latin America manage their finances and schedules, built to fit how they already work.",
+    description: `We won first place at the Inaugural SHPE VIBRA ATL Hackathon competing against teams from across Atlanta's SHPE chapters. Alongside my teammates Lucas Arano, Jeronimo Roldan, and Santiago de Grandchant, we built Mani in 24 hours and presented it to judges who saw the value it could bring to small businesses across Latin America.
 
-Mani does. It lives where business owners already live — WhatsApp — and turns their daily messages into structured business intelligence. Log a sale with a voice note. Snap a receipt. Text an update. Mani makes sense of it and gives owners the visibility they need to grow, without asking them to change how they work or download something new.
+Micro and small businesses across Latin America run on WhatsApp. Owners send voice notes, snap photos of receipts, and manage operations through quick texts in Spanish. The tools built for them rarely start from that reality.
 
-Built at the Inaugural SHPE VIBRA ATL Hackathon, where we took 1st place.
+Mani does. It lives where business owners already live and turns their daily messages into structured business intelligence. Log a sale with a voice note. Snap a receipt. Text an update. Mani makes sense of it and gives owners the visibility they need to grow, without asking them to change how they work or download anything new.
 
-My role was UI, UX, and brand identity. I designed and coded the full design system in HTML and CSS — color tokens, spacing, shadows, motion durations, all defined as CSS variables so the team could move fast in React without going off-brand. Typography runs on Nunito, four weights, each with a specific job. The chart color sequence is fixed to the brand palette so data always reads in the right order.
+My role covered a dynamic, agent-driven frontend that adapts to user behavior and system inputs in real time, brand templates, and a lightweight design system to ensure consistency across the application. I also worked with Jeronimo Roldan on branding and visual identity, helping shape the design direction and ensuring a cohesive look and feel across the product.
 
-Every technical decision started with the same question: would someone opening this for the first time feel like it was made for them? That shaped everything — the warmth of the palette, the roundness of the components, the way the mascot appears in empty states. Someone landing on Mani should feel invited in, not intimidated.
+I also gained exposure to backend architecture and live database integration through discussions and implementation work with Lucas Arano and Santiago de Grandchant, who built the core system architecture and multi-agent workflows powering Mani. This helped me better understand how the frontend connects to backend systems end to end under tight time constraints.
 
-The design system ended up fully documented so the team could build without breaking consistency. Good design, like good engineering, is a system.
+Every component of Mani reflects a different layer of ownership, from system architecture to interaction design and product flow. The team worked nonstop for 24 hours to bring it to life, and I am incredibly proud of what we shipped together.
 
-The rest of the stack — WhatsApp integration, multi-agent LangGraph architecture, voice and OCR parsing — was built by my teammates Lucas Arano, Santiago de Grandchant, and Jeronimo Roldan. That work is genuinely impressive, and I learned enormously from each of them over the course of the weekend.
-
-Mani isn't a hackathon project we're shelving. The goal is to get it into the hands of real business owners across Latin America.`,
-    role: "UI/UX Designer & Design Systems Engineer",
+Be on the lookout for more updates on Mani. We are ready to make a difference in Latin America.`,
+    role: "UI/UX Designer, Frontend Engineer and Brand Identity",
     timeline: "Apr 2026",
-    skills: ["UI/UX Design", "Design Systems", "HTML", "CSS", "CSS Variables", "React", "Brand Identity", "Typography", "User-Centered Design"],
+    images: ["/images/mani.jpg"],
+    skills: ["UI/UX Design", "Design Systems", "HTML", "CSS", "CSS Variables", "React", "Brand Identity", "Typography", "Frontend Engineering", "User-Centered Design"],
     featured: true,
     highlights: [
-      { value: "1st", label: "Place — SHPE VIBRA ATL Hackathon" },
-      { value: "Full", label: "Design system in HTML/CSS" },
+      { value: "1st Place", label: "SHPE VIBRA ATL Hackathon" },
+      { value: "24hrs", label: "Built end to end" },
       { value: "LATAM", label: "Target market" },
     ],
     approach: [
       {
         title: "Start Where They Already Are",
-        description: "Mani's core constraint was zero behavior change. Business owners shouldn't need a new app or new habits — the product had to fit inside WhatsApp, the tool they already use to run their business every day.",
+        description: "Mani's core constraint was zero behavior change. Business owners should not need a new app or new habits. The product had to fit inside WhatsApp, the tool they already use to run their business every day.",
       },
       {
-        title: "Build a Design System, Not Just a UI",
-        description: "I coded the full design system in HTML and CSS using CSS variables for color tokens, spacing, shadows, and motion durations. This gave the React team a consistent foundation to build on without needing to make design decisions mid-sprint.",
+        title: "Agent-Driven Frontend",
+        description: "I built a dynamic frontend that adapts to user behavior and system inputs in real time, connecting seamlessly to the multi-agent backend architecture built by Lucas and Santiago.",
       },
       {
         title: "Design for Belonging",
-        description: "The visual language was intentional: warm palette, rounded components, a mascot that shows up in empty states. Every decision was filtered through one question — would someone opening this for the first time feel like it was made for them?",
+        description: "The visual language was intentional: warm palette, rounded components, a mascot that shows up in empty states. Every decision was filtered through one question: would someone opening this for the first time feel like it was made for them?",
       },
       {
-        title: "Document So the Team Can Move Fast",
-        description: "The design system was fully documented so teammates could build without breaking consistency. A design system without documentation is just a sketch. The goal was to give the engineering team clarity, not constraints.",
+        title: "Design System and Brand Identity",
+        description: "I built a lightweight design system with consistent brand templates so the team could move fast without going off brand. Working with Jeronimo on visual identity, we made sure every screen felt like it belonged to the same product.",
       },
     ],
   },
