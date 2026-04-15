@@ -75,11 +75,11 @@ Be on the lookout for more updates on Mani. We are ready to make a difference in
     id: "proj-internnest",
     title: "InternNest",
     tagline: "A platform helping interns find subleases, navigate transit, and build community in new cities.",
-    description: `The problem: Every summer, thousands of interns relocate to cities they've never lived in. They're scrambling to find short-term housing, figure out transit, and meet people — all while starting a new job.
+    description: `Every summer, thousands of interns relocate to cities they have never lived in. They are scrambling to find short-term housing, figure out transit, and meet people, all while starting a new job.
 
 We built InternNest to solve this. The platform matches interns with neighborhoods based on their commute, budget, and priorities, surfaces transit tips from past interns, and connects them with a community of other interns in their city.
 
-Currently at MVP stage — more updates coming soon.`,
+Currently at MVP stage with more updates coming soon.`,
     role: "Co-founder & Developer",
     timeline: "Jan 2026 – Present",
     skills: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"],
@@ -92,7 +92,7 @@ Currently at MVP stage — more updates coming soon.`,
     highlights: [
       { value: "Live", label: "Deployed on Vercel" },
       { value: "MVP", label: "Current stage" },
-      { value: "5", label: "Core tech layers" },
+      { value: "10+", label: "Cities supported" },
     ],
   },
   {
