@@ -167,7 +167,7 @@ The project was developed as a formal case study at WHU Otto Beisheim School of 
 
 My contributions included cleaning and normalizing datasets using Python and the Pandas library to optimize processing times, and collaborating with a team of 15+ members to refine the Convolutional Neural Network (CNN) algorithm.
 
-The key technical challenge was implementing and testing different stages of data fusion — combining medical images, doctors' notes, and normalized structured datasets to improve predictive accuracy. Each fusion stage required careful evaluation of how different data modalities interacted and affected model performance.
+The key technical challenge was implementing and testing different stages of data fusion: combining medical images, doctors' notes, and normalized structured datasets to improve predictive accuracy. Each fusion stage required careful evaluation of how different data modalities interacted and affected model performance.
 
 This project deepened my understanding of real-world ML pipelines, the messiness of medical data, and how interdisciplinary collaboration across a large team shapes technical decisions.`,
     role: "Research Team Member",
