@@ -28,11 +28,11 @@ export const experiences: ExperienceEntry[] = [
     startDate: "Jun 2026",
     endDate: "Aug 2026",
     type: "internship",
-    category: "upcoming",
+    category: "professional",
     logo: "https://www.google.com/s2/favicons?domain=goldmansachs.com&sz=64",
     url: "https://www.goldmansachs.com",
     summary:
-      "Incoming Summer Analyst on the FICC Fees & Commissions Operations Analytics team within Global Banking & Markets, building tools to safeguard trading rate accuracy and reconcile fee breaks across billions in daily trading activity.",
+      "Served as a Summer Analyst on the FICC Fees & Commissions Operations Analytics team within Global Banking & Markets, building tools to safeguard trading rate accuracy and reconcile fee breaks across billions in daily trading activity.",
     description: [
       "Built a consolidated Rate Card Repository (BCE Rate Hub) to streamline processes across 6+ operations pods including Negotiations, Investigations, and Reconciliation, digitizing 2,781 rate cards into 50,000+ queryable rows and directly supporting the firm's $200M BCE Optimization program.",
       "Engineered automated stale-rate warnings, one-click card updating, an integrated chatbot for rate queries, and a revision agent that compares rate card versions to flag differences, with version control maintaining a full history of rate and contract changes.",

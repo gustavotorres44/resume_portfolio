@@ -105,7 +105,6 @@ const stops = [
     description: "Built a Rate Card Repository digitizing 2,781 cards into 50,000+ rows, and a reconciliation pipeline raising deterministic trade matching from 0% to 80% across $3B in daily trades.",
     color: "#6CB0FF",
     emoji: "🏦",
-    upcoming: true,
     image: "/images/goldman.jpg",
   },
 ];
@@ -217,14 +216,6 @@ export default function JourneyPage() {
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <h2 className="font-display text-base">{activeStop.city}</h2>
-                    {"upcoming" in activeStop && activeStop.upcoming && (
-                      <span
-                        className="px-2 py-0.5 rounded-full text-xs font-semibold font-body"
-                        style={{ background: `${activeStop.color}20`, color: activeStop.color }}
-                      >
-                        Upcoming
-                      </span>
-                    )}
                   </div>
                   <p className="text-xs font-body font-semibold mt-0.5" style={{ color: activeStop.color }}>
                     {activeStop.year}
@@ -361,7 +352,7 @@ export default function JourneyPage() {
                     />
                     <circle
                       r={isActive ? 6 : 4}
-                      fill={"upcoming" in stop && stop.upcoming ? `${stop.color}50` : stop.color}
+                      fill={stop.color}
                       stroke={stop.color}
                       strokeWidth={1.5}
                       style={{
