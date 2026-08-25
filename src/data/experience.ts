@@ -38,12 +38,15 @@ export const experiences: ExperienceEntry[] = [
       "Engineered automated stale-rate warnings, one-click card updating, an integrated chatbot for rate queries, and a revision agent that compares rate card versions to flag differences, with version control maintaining a full history of rate and contract changes.",
       "Built a Fee-Type Reconciliation Pipeline mapping internal trade records (Revan) against exchange data, giving the team its first deterministic method to locate breaks in fee payment and collection across ~$3 billion in daily trades and 100,000+ daily transactions.",
       "Raised deterministic trade matching from 0% to 80%, replacing an estimation-based process with a clear find-investigate-fix workflow that pinpoints the exact source and dollar amount of each break, helping ensure ~$72 billion in monthly trading activity is accurately accounted for.",
+      "Deployed the Fee-Type Reconciliation Pipeline to production using Kubernetes, and built and maintained the underlying pipeline infrastructure.",
+      "Advanced to the finals of a firmwide pitch competition spanning teams across and outside of Global Banking & Markets, presenting to Managing Directors in the final round.",
     ],
-    skills: ["Rate Card Systems", "Data Reconciliation", "Process Automation", "Chatbot Development", "Version Control", "Financial Operations", "FICC"],
+    skills: ["Rate Card Systems", "Data Reconciliation", "Process Automation", "Chatbot Development", "Version Control", "Kubernetes", "Financial Operations", "FICC"],
     highlights: [
       "Digitized 2,781 rate cards into 50,000+ queryable rows supporting a $200M optimization program",
       "Raised deterministic trade matching from 0% to 80% across $3B in daily trades",
       "Reconciliation pipeline ensures ~$72B in monthly trading activity is accurately accounted for",
+      "Reached the finals of a firmwide pitch competition, presenting to Managing Directors",
     ],
   },
   {
