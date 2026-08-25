@@ -23,7 +23,7 @@ export const experiences: ExperienceEntry[] = [
   {
     id: "exp-goldman",
     company: "Goldman Sachs",
-    role: "Operations Intern, Global Banking & Markets",
+    role: "Summer Analyst, FICC Fees & Commissions Operations (FCO) Analytics",
     location: "Salt Lake City, UT",
     startDate: "Jun 2026",
     endDate: "Aug 2026",
@@ -31,9 +31,20 @@ export const experiences: ExperienceEntry[] = [
     category: "upcoming",
     logo: "https://www.google.com/s2/favicons?domain=goldmansachs.com&sz=64",
     url: "https://www.goldmansachs.com",
-    summary: "Incoming Operations Intern on the Global Banking & Markets team.",
-    description: ["Coming soon."],
-    skills: [],
+    summary:
+      "Incoming Summer Analyst on the FICC Fees & Commissions Operations Analytics team within Global Banking & Markets, building tools to safeguard trading rate accuracy and reconcile fee breaks across billions in daily trading activity.",
+    description: [
+      "Built a consolidated Rate Card Repository (BCE Rate Hub) to streamline processes across 6+ operations pods including Negotiations, Investigations, and Reconciliation, digitizing 2,781 rate cards into 50,000+ queryable rows and directly supporting the firm's $200M BCE Optimization program.",
+      "Engineered automated stale-rate warnings, one-click card updating, an integrated chatbot for rate queries, and a revision agent that compares rate card versions to flag differences, with version control maintaining a full history of rate and contract changes.",
+      "Built a Fee-Type Reconciliation Pipeline mapping internal trade records (Revan) against exchange data, giving the team its first deterministic method to locate breaks in fee payment and collection across ~$3 billion in daily trades and 100,000+ daily transactions.",
+      "Raised deterministic trade matching from 0% to 80%, replacing an estimation-based process with a clear find-investigate-fix workflow that pinpoints the exact source and dollar amount of each break, helping ensure ~$72 billion in monthly trading activity is accurately accounted for.",
+    ],
+    skills: ["Rate Card Systems", "Data Reconciliation", "Process Automation", "Chatbot Development", "Version Control", "Financial Operations", "FICC"],
+    highlights: [
+      "Digitized 2,781 rate cards into 50,000+ queryable rows supporting a $200M optimization program",
+      "Raised deterministic trade matching from 0% to 80% across $3B in daily trades",
+      "Reconciliation pipeline ensures ~$72B in monthly trading activity is accurately accounted for",
+    ],
   },
   {
     id: "exp-accenture",
