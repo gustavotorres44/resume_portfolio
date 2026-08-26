@@ -28,7 +28,7 @@ export const projects: ProjectEntry[] = [
   {
     id: "proj-mani",
     title: "Mani",
-    tagline: "1st Place at the Inaugural SHPE VIBRA ATL Hackathon. An intelligent multi-agent system helping small businesses in Latin America manage their finances and schedules, built to fit how they already work.",
+    tagline: "1st Place at the Inaugural SHPE VIBRA ATL Hackathon. An intelligent multi-agent system helping small businesses in Latin America manage their finances and schedules, built to fit how they already work. Went on to interview with Y Combinator.",
     description: `At the Inaugural SHPE VIBRA ATL Hackathon, my team took first place. Alongside Lucas Arano, Jeronimo Roldan, and Santiago de Grandchant, we had 24 hours to build something that mattered. We built Mani.
 
 Micro and small businesses across Latin America run on WhatsApp. Owners send voice notes, snap photos of receipts, and manage operations through quick texts in Spanish. The tools built for them rarely start from that reality.
@@ -41,7 +41,7 @@ I also gained exposure to backend architecture and live database integration thr
 
 Every component of Mani reflects a different layer of ownership, from system architecture to interaction design and product flow. The team worked nonstop for 24 hours to bring it to life, and I am incredibly proud of what we shipped together.
 
-Be on the lookout for more updates on Mani. We are ready to make a difference in Latin America.`,
+Off the back of that momentum, we interviewed with Y Combinator. We ultimately decided to pause development on Mani, but interviewing at YC remains one of the proudest outcomes of the project.`,
     role: "UI/UX Designer, Frontend Engineer and Brand Identity",
     timeline: "Apr 2026",
     images: ["/images/mani.jpg"],
@@ -51,6 +51,7 @@ Be on the lookout for more updates on Mani. We are ready to make a difference in
       { value: "1st Place", label: "SHPE VIBRA ATL Hackathon" },
       { value: "24hrs", label: "Built end to end" },
       { value: "LATAM", label: "Target market" },
+      { value: "YC", label: "Interviewed with Y Combinator" },
     ],
     approach: [
       {
