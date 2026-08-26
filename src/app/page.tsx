@@ -96,39 +96,6 @@ export default function Home() {
         </section>
       )}
 
-      {/* Mani */}
-      <section className="mb-14">
-        <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
-          Hackathon Project
-        </h2>
-        <Link href="/projects/proj-mani" className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 overflow-hidden flex flex-col md:flex-row hover:border-[var(--accent)] transition-colors group">
-          <div className="p-6 flex flex-col justify-between flex-1">
-            <div>
-              <div className="flex items-center gap-2 mb-1 flex-wrap">
-                <h3 className="font-display text-xl">Mani</h3>
-                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-600 font-body">1st Place · SHPE VIBRA ATL Hackathon</span>
-                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-500/10 text-orange-600 font-body">Interviewed at YC</span>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] font-body mb-3">UI/UX Designer & Frontend Engineer · Apr 2026</p>
-              <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed mb-4">
-                A WhatsApp AI copilot built for micro and small business owners across Latin America. Voice notes, photos, quick texts in Spanish. No behavior change. Just clarity. The team went on to interview with Y Combinator before deciding to pause development.
-              </p>
-              <div className="flex gap-2 flex-wrap mb-5">
-                {["UI/UX Design", "Design Systems", "HTML", "CSS", "React", "Brand Identity"].map((s) => (
-                  <span key={s} className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body">{s}</span>
-                ))}
-              </div>
-            </div>
-            <span className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body w-fit">
-              View Project →
-            </span>
-          </div>
-          <div className="md:w-72 shrink-0 border-t md:border-t-0 md:border-l border-[var(--accent)]/20 overflow-hidden">
-            <img src="/images/mani.jpg" alt="Mani project" className="w-full h-full object-cover object-top" />
-          </div>
-        </Link>
-      </section>
-
       {/* Latest Role */}
       {latestExperience && (
         <section className="mb-14">
@@ -183,6 +150,39 @@ export default function Home() {
           </Link>
         </section>
       )}
+
+      {/* Mani */}
+      <section className="mb-14">
+        <h2 className="text-xs font-bold text-[var(--text-secondary)] tracking-widest uppercase mb-6 font-body">
+          Hackathon Project
+        </h2>
+        <Link href="/projects/proj-mani" className="rounded-2xl border border-[var(--accent)]/30 bg-[var(--accent)]/5 overflow-hidden flex flex-col md:flex-row hover:border-[var(--accent)] transition-colors group">
+          <div className="p-6 flex flex-col justify-between flex-1">
+            <div>
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <h3 className="font-display text-xl">Mani</h3>
+                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-600 font-body">1st Place · SHPE VIBRA ATL Hackathon</span>
+                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-500/10 text-orange-600 font-body">Interviewed at YC</span>
+              </div>
+              <p className="text-sm text-[var(--text-secondary)] font-body mb-3">UI/UX Designer & Frontend Engineer · Apr 2026</p>
+              <p className="text-sm text-[var(--text-secondary)] font-body leading-relaxed mb-4">
+                A WhatsApp AI copilot built for micro and small business owners across Latin America. Voice notes, photos, quick texts in Spanish. No behavior change. Just clarity. The team went on to interview with Y Combinator before deciding to pause development.
+              </p>
+              <div className="flex gap-2 flex-wrap mb-5">
+                {["UI/UX Design", "Design Systems", "HTML", "CSS", "React", "Brand Identity"].map((s) => (
+                  <span key={s} className="px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-xs font-medium text-[var(--text-secondary)] font-body">{s}</span>
+                ))}
+              </div>
+            </div>
+            <span className="px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-semibold font-body w-fit">
+              View Project →
+            </span>
+          </div>
+          <div className="md:w-72 shrink-0 border-t md:border-t-0 md:border-l border-[var(--accent)]/20 overflow-hidden">
+            <img src="/images/mani.jpg" alt="Mani project" className="w-full h-full object-cover object-top" />
+          </div>
+        </Link>
+      </section>
 
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
