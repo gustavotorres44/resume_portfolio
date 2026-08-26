@@ -29,7 +29,7 @@ export const experiences: ExperienceEntry[] = [
     endDate: "Present",
     type: "parttime",
     category: "professional",
-    logo: "https://www.google.com/s2/favicons?domain=dhl.com&sz=64",
+    logo: "/images/DHL-emblem.jpg",
     url: "https://www.dhl.com",
     summary:
       "Designing an in-house air cargo management system for DHL distribution centers as part of Georgia Tech's ISyE Senior Design capstone.",
