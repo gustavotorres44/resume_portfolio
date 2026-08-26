@@ -21,6 +21,24 @@ export interface ExperienceEntry {
 
 export const experiences: ExperienceEntry[] = [
   {
+    id: "exp-dhl-senior-design",
+    company: "DHL eCommerce",
+    role: "ISyE Senior Design Team Member, Air Cargo In-House Management",
+    location: "Atlanta, GA",
+    startDate: "Aug 2026",
+    endDate: "Present",
+    type: "parttime",
+    category: "professional",
+    logo: "https://www.google.com/s2/favicons?domain=dhl.com&sz=64",
+    url: "https://www.dhl.com",
+    summary:
+      "Designing an in-house air cargo management system for DHL distribution centers as part of Georgia Tech's ISyE Senior Design capstone.",
+    description: [
+      "Designing an in-house air cargo management system for DHL distribution centers, specifying organizational structure, decision rules, and staffing for airline booking, carrier selection, and exception detection/resolution.",
+    ],
+    skills: ["Operations Research", "Process Design", "Decision Rules", "Staffing Analysis", "Logistics", "Air Cargo Operations"],
+  },
+  {
     id: "exp-goldman",
     company: "Goldman Sachs",
     role: "Summer Analyst, FICC Fees & Commissions Operations (FCO) Analytics",
